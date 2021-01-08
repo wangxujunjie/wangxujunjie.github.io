@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-01-08T15:33:54.517Z</updated>
+  <updated>2021-01-08T16:21:31.000Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -17,24 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
-    <link href="https://wangxujunjie.github.io/2021/01/08/article-title/"/>
-    <id>https://wangxujunjie.github.io/2021/01/08/article-title/</id>
-    <published>2021-01-08T15:33:54.000Z</published>
-    <updated>2021-01-08T15:33:54.517Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>我的第一篇博客</title>
-    <link href="https://wangxujunjie.github.io/2020/01/09/hello-world/"/>
-    <id>https://wangxujunjie.github.io/2020/01/09/hello-world/</id>
-    <published>2020-01-08T16:00:00.000Z</published>
-    <updated>2021-01-08T16:14:50.305Z</updated>
+    <link href="https://wangxujunjie.github.io/2021/01/09/hello-world/"/>
+    <id>https://wangxujunjie.github.io/2021/01/09/hello-world/</id>
+    <published>2021-01-08T16:00:00.000Z</published>
+    <updated>2021-01-08T16:21:31.000Z</updated>
     
     
       
@@ -50,9 +37,22 @@
     <category term="新的起点" scheme="https://wangxujunjie.github.io/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     
     
-    <category term="Typora" scheme="https://wangxujunjie.github.io/tags/Typora/"/>
+    <category term="芜湖" scheme="https://wangxujunjie.github.io/tags/%E8%8A%9C%E6%B9%96/"/>
     
-    <category term="Markdown" scheme="https://wangxujunjie.github.io/tags/Markdown/"/>
+    <category term="起飞" scheme="https://wangxujunjie.github.io/tags/%E8%B5%B7%E9%A3%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>article title</title>
+    <link href="https://wangxujunjie.github.io/2021/01/08/article-title/"/>
+    <id>https://wangxujunjie.github.io/2021/01/08/article-title/</id>
+    <published>2021-01-08T15:33:54.000Z</published>
+    <updated>2021-01-08T15:33:54.517Z</updated>
+    
+    
+    
+    
     
   </entry>
   

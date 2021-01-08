@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wangxujunjie.github.io/2020/01/09/hello-world/</loc>
+    <loc>https://wangxujunjie.github.io/2021/01/09/hello-world/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -60,14 +60,14 @@
 
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/Typora/</loc>
+    <loc>https://wangxujunjie.github.io/tags/%E8%8A%9C%E6%B9%96/</loc>
     <lastmod>2021-01-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/Markdown/</loc>
+    <loc>https://wangxujunjie.github.io/tags/%E8%B5%B7%E9%A3%9E/</loc>
     <lastmod>2021-01-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
