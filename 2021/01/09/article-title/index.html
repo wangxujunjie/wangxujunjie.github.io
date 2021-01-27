@@ -388,6 +388,8 @@ if (windowWidth > 768) {
 <h2 id="二、最大公约数的三种求法"><a href="#二、最大公约数的三种求法" class="headerlink" title="二、最大公约数的三种求法"></a>二、最大公约数的三种求法</h2><hr>
 <p>1.更相止损法</p>
 <p>  &emsp;&emsp;  两个正整数a和b(a&gt;b)，它们的最大公约数等于a-b的差值c和较小数b的最大公约数。我来介绍一下这个算法的优点，就是避免了大整数取模导致效率低下，但是运算次数要比辗转相除多得多，所以我们在使用的时候需要判断一下。</p>
+<img src="C:\Users\dell\Desktop\tu\a.png">
+
 <pre><code>int gcd(int a,int b)
 &#123;
     if(a==b)
