@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>最大公约数和最小公倍数</title>
+      <title>分解质因子</title>
       <link href="2021/01/27/gongyinshu/"/>
       <url>2021/01/27/gongyinshu/</url>
       
-        <content type="html"><![CDATA[<h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr><p>&emsp;&emsp; 下面是一道简单的例题，向大家介绍一下如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p><p>```<br>                        <strong>分解质因子</strong><br>题目描述<br>    将一个正整数分解质因数，例如，输入90，输出2 3 3 5。<br>输入<br>    输入一个正整数n（2&lt;=n&lt;=2000）。<br>输出<br>    从小到大输出n的所有质因子，每两个数之间空一格。<br>样例输入<br>20<br>样例输出<br>2 2 5</p><p>#include<iostream><br>using namespace std;<br>bool compare(int a,int b)<br>{<br>    return a&gt;b;<br>}<br>int main()<br>{<br>    int n;<br>    cin &gt;&gt; n ;<br>    for(int i = 2 ; n &gt; 1 ; i++){//如果n=1，已经完成分解，跳出循环。<br>        while( n%i == 0) {        //如果能整除当前的数，则一直循环，直到不能整除当前的数。<br>            cout &lt;&lt; i ;<br>            n = n/i ;<br>            if(n==1) cout &lt;&lt; endl ;        //如果n等于1，则证明已经完成分解，换行。<br>            else cout &lt;&lt; “ “ ;            //如果n！=1 ， 输出空格 继续循环。<br>        }<br>    }<br>    return 0;<br>}</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr><p>&emsp;&emsp; 下面是一道例题，简单的介绍了如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p><pre><code>                               **分解质因子**题目描述    将一个正整数分解质因数，例如，输入90，输出2 3 3 5。 输入    输入一个正整数n（2&lt;=n&lt;=2000）。 输出    从小到大输出n的所有质因子，每两个数之间空一格。 样例输入20样例输出    2 2 5#include&lt;iostream&gt;using namespace std;bool compare(int a,int b)&#123;    return a&gt;b;&#125;int main()&#123;    int n;    cin &gt;&gt; n ;    for(int i = 2 ; n &gt; 1 ; i++)&#123;    //如果n=1，已经完成分解，跳出循环。         while( n%i == 0) &#123;             //如果能整除当前的数，则一直循环，直到不能整除当前的数。             cout &lt;&lt; i ;            n = n/i ;            if(n==1) cout &lt;&lt; endl ;        //如果n等于1，则证明已经完成分解，换行。             else cout &lt;&lt; &quot; &quot; ;            //如果n！=1 ， 输出空格 继续循环。         &#125;    &#125;    return 0;&#125;</code></pre>]]></content>
       
       
       
