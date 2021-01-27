@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-01-27T07:23:21.617Z</updated>
+  <updated>2021-01-27T08:43:56.138Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最大公约数和最小公倍数</title>
+    <link href="https://wangxujunjie.github.io/2021/01/27/gongyinshu/"/>
+    <id>https://wangxujunjie.github.io/2021/01/27/gongyinshu/</id>
+    <published>2021-01-26T16:00:00.000Z</published>
+    <updated>2021-01-27T08:43:56.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;分解质因子&quot;&gt;&lt;a href=&quot;#分解质因子&quot; class=&quot;headerlink&quot; title=&quot;分解质因子&quot;&gt;&lt;/a&gt;分解质因子&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++" scheme="https://wangxujunjie.github.io/tags/C/"/>
+    
+    <category term="数学" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>最大公约数和最小公倍数</title>
