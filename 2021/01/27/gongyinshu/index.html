@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="再也の不会" type="application/atom+xml"><!-- hexo-inject:begin --><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.css'><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="再也の不会" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -384,13 +384,41 @@ if (windowWidth > 768) {
             <div id="articleContent">
                 <h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr>
 <p>&emsp;&emsp; 下面是一道例题，简单的介绍了如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p>
+<pre class=" language-c"><code class="language-c">
+                               <span class="token operator">*</span><span class="token operator">*</span>分解质因子<span class="token operator">*</span><span class="token operator">*</span>
+题目描述
+    将一个正整数分解质因数，例如，输入<span class="token number">90</span>，输出<span class="token number">2</span> <span class="token number">3</span> <span class="token number">3</span> <span class="token number">5</span>。 
+输入
+    输入一个正整数n（<span class="token number">2</span><span class="token operator">&lt;=</span>n<span class="token operator">&lt;=</span><span class="token number">2000</span>）。 
+输出
+    从小到大输出n的所有质因子，每两个数之间空一格。 
+样例输入
+<span class="token number">20</span>
+样例输出    
+<span class="token number">2</span> <span class="token number">2</span> <span class="token number">5</span>
 
-<!-- Has Prism -->
-<pre class="{{ pre_class }}" style="{{ pre_style }}" {{ data_attr }}><code class="language-&#123;&#123; lang &#125;&#125;">
-&#123;&#123;- code -&#125;&#125;
+
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+using namespace std<span class="token punctuation">;</span>
+bool <span class="token function">compare</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">></span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n <span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> n <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果n=1，已经完成分解，跳出循环。 </span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span> n<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">//如果能整除当前的数，则一直循环，直到不能整除当前的数。 </span>
+            cout <span class="token operator">&lt;&lt;</span> i <span class="token punctuation">;</span>
+            n <span class="token operator">=</span> n<span class="token operator">/</span>i <span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> endl <span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果n等于1，则证明已经完成分解，换行。 </span>
+            <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//如果n！=1 ， 输出空格 继续循环。 </span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-
-
 
             </div>
             <hr/>
@@ -629,50 +657,36 @@ if (windowWidth > 768) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/01/27/gongyinshu/">
+                <a href="/2021/01/29/ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="分解质因子">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="测试">
                         
-                        <span class="card-title">分解质因子</span>
+                        <span class="card-title">测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你不去闯怎么知道后面是悬崖还是大海
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            再也不会
+                            再也の不会
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                        <span class="chip bg-color">数学</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -955,7 +969,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js'></script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js'></script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'></script><!-- hexo-inject:end -->
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
     
