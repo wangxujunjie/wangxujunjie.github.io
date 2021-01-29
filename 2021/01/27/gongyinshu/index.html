@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="分解质因子, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,14 +29,14 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="再也の不会" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="再也の不会" type="application/atom+xml"><!-- hexo-inject:begin --><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.css'><!-- hexo-inject:end -->
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
 
 <body>
-    <script type="text/javascript">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
 //只在桌面版网页启用特效
 var windowWidth = $(window).width();
 if (windowWidth > 768) {
@@ -384,39 +384,13 @@ if (windowWidth > 768) {
             <div id="articleContent">
                 <h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr>
 <p>&emsp;&emsp; 下面是一道例题，简单的介绍了如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p>
-<pre><code>                               **分解质因子**
-题目描述
-    将一个正整数分解质因数，例如，输入90，输出2 3 3 5。 
-输入
-    输入一个正整数n（2&lt;=n&lt;=2000）。 
-输出
-    从小到大输出n的所有质因子，每两个数之间空一格。 
-样例输入
-20
-样例输出    
-2 2 5
+
+<!-- Has Prism -->
+<pre class="{{ pre_class }}" style="{{ pre_style }}" {{ data_attr }}><code class="language-&#123;&#123; lang &#125;&#125;">
+&#123;&#123;- code -&#125;&#125;
+</code></pre>
 
 
-#include&lt;iostream&gt;
-using namespace std;
-bool compare(int a,int b)
-&#123;
-    return a&gt;b;
-&#125;
-int main()
-&#123;
-    int n;
-    cin &gt;&gt; n ;
-    for(int i = 2 ; n &gt; 1 ; i++)&#123;    //如果n=1，已经完成分解，跳出循环。 
-        while( n%i == 0) &#123;             //如果能整除当前的数，则一直循环，直到不能整除当前的数。 
-            cout &lt;&lt; i ;
-            n = n/i ;
-            if(n==1) cout &lt;&lt; endl ;        //如果n等于1，则证明已经完成分解，换行。 
-            else cout &lt;&lt; &quot; &quot; ;            //如果n！=1 ， 输出空格 继续循环。 
-        &#125;
-    &#125;
-    return 0;
-&#125;</code></pre>
 
             </div>
             <hr/>
@@ -981,7 +955,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js'></script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js'></script><script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'></script><!-- hexo-inject:end -->
     
 
     
