@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-01-31T06:11:34.507Z</updated>
+  <updated>2021-01-31T11:30:50.224Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>位运算例题</title>
+    <link href="https://wangxujunjie.github.io/2021/01/31/wei/"/>
+    <id>https://wangxujunjie.github.io/2021/01/31/wei/</id>
+    <published>2021-01-31T11:02:42.000Z</published>
+    <updated>2021-01-31T11:30:50.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、a-b&quot;&gt;&lt;a href=&quot;#一、a-b&quot; class=&quot;headerlink&quot; title=&quot;一、a^b&quot;&gt;&lt;/a&gt;一、a^b&lt;/h2&gt;&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="位运算" scheme="https://wangxujunjie.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>全排列</title>
