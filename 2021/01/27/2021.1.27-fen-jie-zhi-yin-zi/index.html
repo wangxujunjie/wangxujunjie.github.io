@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, 再也の不会">
+    <meta name="keywords" content="分解质因子, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | 再也の不会</title>
+    <title>分解质因子 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,12 +319,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">分解质因子</h1>
                 </div>
             </div>
         </div>
@@ -344,21 +344,20 @@ if (windowWidth > 768) {
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                    <div class="article-tag">
                         
-                            <a href="/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/" class="post-category">
-                                新的起点
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
+                    
+                </div>
+                <div class="col s5 right-align">
                     
                 </div>
             </div>
@@ -367,7 +366,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-08
+                    2021-01-27
                 </div>
                 
 
@@ -383,12 +382,42 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="佛系更新中"><a href="#佛系更新中" class="headerlink" title="佛系更新中"></a>佛系更新中</h2><h2 id="一giao我了giao-脑子不太好"><a href="#一giao我了giao-脑子不太好" class="headerlink" title="一giao我了giao(脑子不太好)"></a>一giao我了giao(脑子不太好)</h2><hr>
-<pre class=" language-bash"><code class="language-bash">
-   终于能抽出些时间来整理我的博客了，今后我会将我平时的刷算法的经
-验以及好的技巧上传至博客，希望能够对刚开始学习算法的同学有一些帮助
- （如果有不足的地方还请大家积极指出）
+                <h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr>
+<p>&emsp;&emsp; 下面是一道例题，简单的介绍了如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p>
+<pre class=" language-c"><code class="language-c">
+                               <span class="token operator">*</span><span class="token operator">*</span>分解质因子<span class="token operator">*</span><span class="token operator">*</span>
+题目描述
+    将一个正整数分解质因数，例如，输入<span class="token number">90</span>，输出<span class="token number">2</span> <span class="token number">3</span> <span class="token number">3</span> <span class="token number">5</span>。 
+输入
+    输入一个正整数n（<span class="token number">2</span><span class="token operator">&lt;=</span>n<span class="token operator">&lt;=</span><span class="token number">2000</span>）。 
+输出
+    从小到大输出n的所有质因子，每两个数之间空一格。 
+样例输入
+<span class="token number">20</span>
+样例输出    
+<span class="token number">2</span> <span class="token number">2</span> <span class="token number">5</span>
 
+
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+using namespace std<span class="token punctuation">;</span>
+bool <span class="token function">compare</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">></span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n <span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> n <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果n=1，已经完成分解，跳出循环。 </span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span> n<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">//如果能整除当前的数，则一直循环，直到不能整除当前的数。 </span>
+            cout <span class="token operator">&lt;&lt;</span> i <span class="token punctuation">;</span>
+            n <span class="token operator">=</span> n<span class="token operator">/</span>i <span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> endl <span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果n等于1，则证明已经完成分解，换行。 </span>
+            <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//如果n！=1 ， 输出空格 继续循环。 </span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
             </div>
@@ -415,7 +444,7 @@ if (windowWidth > 768) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/01/08/hello-world/">https://wangxujunjie.github.io/2021/01/08/hello-world/</a>
+                    <a href="https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/">https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -452,7 +481,15 @@ if (windowWidth > 768) {
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -624,6 +661,51 @@ if (windowWidth > 768) {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2021/01/29/cf698dv2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Codeforces Round 698 (Div. 2)">
+                        
+                        <span class="card-title">Codeforces Round 698 (Div. 2)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            能坚持别人不能坚持的,才能拥有别人不能拥有的
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            再也不会
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CF/">
+                        <span class="chip bg-color">CF</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/">
                     <div class="card-image">
                         
@@ -640,9 +722,9 @@ if (windowWidth > 768) {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -663,48 +745,6 @@ if (windowWidth > 768) {
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/08/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
-                        
-                        <span class="card-title">我的第一篇博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            学如逆水行舟，不进则退
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/" class="post-category">
-                                    新的起点
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>

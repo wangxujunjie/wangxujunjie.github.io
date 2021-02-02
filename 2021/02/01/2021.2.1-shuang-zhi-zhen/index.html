@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="位运算例题, 再也の不会">
+    <meta name="keywords" content="双指针, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>位运算例题 | 再也の不会</title>
+    <title>双指针 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,12 +319,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">位运算例题</h1>
+                    <h1 class="description center-align post-title">双指针</h1>
                 </div>
             </div>
         </div>
@@ -441,8 +441,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                                <span class="chip bg-color">位运算</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                <span class="chip bg-color">算法 双指针</span>
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-31
+                    2021-02-01
                 </div>
                 
 
@@ -473,61 +473,80 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、a-b"><a href="#一、a-b" class="headerlink" title="一、a^b"></a>一、a^b</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>求a的b次方对p取模的值，其中 1&lt;=a,b,p&lt;=10^9<br>输入描述:<br>第一行a，第二行b，第三行p。<br>输出描述:<br>一个整数，表示a^bmodp的值。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>a^16 = (a^8)^2 = ((a^4)^2)^2 = (((a^2)^2)^2)^2<br>循环16次 vs 循环3次</p>
-<p>eg：<br>a^26 = a^16 * a^8 *a^2=(((a^2)^2)^2)^2 + ((a^2)^2)^2 + (a^2)<br>26 =16+8+2<br>26的二进制为11010</p>
-<pre class=" language-c"><code class="language-c"><span class="token number">11010</span><span class="token operator">&amp;</span><span class="token number">1</span> <span class="token operator">=</span> <span class="token number">0</span>  a    ans<span class="token operator">=</span><span class="token number">1</span>     <span class="token number">11010</span><span class="token operator">>></span><span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span> <span class="token number">1101</span>   
-<span class="token number">1101</span><span class="token operator">&amp;</span><span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>   a<span class="token operator">^</span><span class="token number">2</span>  ans<span class="token operator">*</span><span class="token operator">=</span>a<span class="token operator">^</span><span class="token number">2</span>  <span class="token number">1101</span><span class="token operator">>></span><span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span> <span class="token number">110</span>   
-<span class="token number">110</span><span class="token operator">&amp;</span><span class="token number">1</span> <span class="token operator">=</span> <span class="token number">0</span>    a<span class="token operator">^</span><span class="token number">4</span>            <span class="token number">110</span><span class="token operator">>></span><span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span> <span class="token number">11</span>
-<span class="token number">11</span><span class="token operator">&amp;</span><span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>     a<span class="token operator">^</span><span class="token number">8</span>  ans<span class="token operator">*</span><span class="token operator">=</span>a<span class="token operator">^</span><span class="token number">8</span>  <span class="token number">11</span><span class="token operator">>></span><span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span> <span class="token number">1</span>  
-<span class="token number">1</span><span class="token operator">&amp;</span><span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>      a<span class="token operator">^</span><span class="token number">16</span> ans<span class="token operator">*</span><span class="token operator">=</span>a<span class="token operator">^</span><span class="token number">16</span> <span class="token number">1</span><span class="token operator">>></span><span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span><span class="token number">0</span>
-意思就是通过位运算减少循环次数，从而避免程序超时</code></pre>
-<p>接下来是a^b mod b做法</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span>    </span><span class="token comment" spellcheck="true">//这里用了scanf和printf也是为了节约时间</span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token macro property">#<span class="token directive keyword">define</span> ll long long</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>p<span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lld %lld %lld"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">,</span><span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> ans <span class="token operator">=</span> ans<span class="token operator">*</span>a<span class="token operator">%</span>p<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//当b的最后一位为1 ，则将此时的a乘上</span>
-        b<span class="token operator">>>=</span><span class="token number">1</span><span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true">//每次b向右移动一位，表示整除2</span>
-        a<span class="token operator">=</span>a<span class="token operator">*</span><span class="token number">2</span><span class="token operator">%</span>p<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">//每次让a翻倍</span>
+                <h2 id="什么是双指针（对撞指针，快慢指针）"><a href="#什么是双指针（对撞指针，快慢指针）" class="headerlink" title="什么是双指针（对撞指针，快慢指针）"></a>什么是双指针（对撞指针，快慢指针）</h2><p>双指针，指的是在遍历对象的过程中，不是普通的使用单个指针进行访问，而是使用两个相同方向（快慢指针）或者相反方向（对撞指针）的指针进行扫描，从而达到相应的目的。<br>换言之，双指针法充分使用了数组有序这一特征，从而在某些情况下能够简化一些运算。</p>
+<h2 id="对撞指针"><a href="#对撞指针" class="headerlink" title="对撞指针"></a>对撞指针</h2><p>对撞指针是指在</font><font color=red>有序数组中</font>，将指向最左侧的索引定义为左指针(left)，最右侧的定义为右指针(right)，然后从两头向中间进行数组遍历。</p>
+<blockquote>
+<p>对撞数组适用于有序数组，也就是说当你遇到题目给定有序数组时，应该第一时间想到用对撞指针解题。</p>
+</blockquote>
+<p>下面是伪代码</p>
+<pre class=" language-c"><code class="language-c">function <span class="token function">fn</span> <span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  var left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  var right <span class="token operator">=</span> list<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">//遍历数组</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    left<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 一些条件判断 和处理</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    right<span class="token operator">--</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>eg: 二分查找,对数组进行反转，还有LeetCode 881<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/boats-to-save-people/">救生艇</a>也是比较经典的问题</p>
+<h2 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h2><p>快慢指针也是双指针，但是两个指针从同一侧开始遍历数组，将这两个指针分别定义为快指针（fast）和慢指针（slow），两个指针以不同的策略移动，直到两个指针的值相等（或其他特殊条件）为止，如fast每次增长两个，slow每次增长一个。</p>
+<h3 id="1、判断链表是否有环"><a href="#1、判断链表是否有环" class="headerlink" title="1、判断链表是否有环"></a>1、判断链表是否有环</h3><p>经典解法就是用两个指针，一个每次前进两步，一个每次前进一步。如果不含有环，跑得快的那个指针最终会遇到 null，说明链表不含环；如果含有环，快指针最终会超慢指针一圈，和慢指针相遇，说明链表含有环。</p>
+<pre class=" language-c"><code class="language-c">boolean <span class="token function">hasCycle</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ListNode fast<span class="token punctuation">,</span> slow<span class="token punctuation">;</span>
+    fast <span class="token operator">=</span> slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>fast <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fast <span class="token operator">==</span> slow<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> true<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld"</span><span class="token punctuation">,</span>ans<span class="token operator">%</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> false<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="二、64位整数乘法"><a href="#二、64位整数乘法" class="headerlink" title="二、64位整数乘法"></a>二、64位整数乘法</h2><h3 id="题目（和上一题很类似）"><a href="#题目（和上一题很类似）" class="headerlink" title="题目（和上一题很类似）"></a>题目（和上一题很类似）</h3><p>求a*b对p取模的值，其中 1&lt;=a,b,p&lt;=10^18<br>输入描述:<br>第一行a，第二行b，第三行p。<br>输出描述:<br>一个整数，表示a^bmodp的值。</p>
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>这道题是要先算出a*b再对其结果进行求模（取余），因为a和b的最大值为1e+18，我们知道乘法有的时候会溢出，即使是 longlong 也可能在乘法时爆掉。所以我们寻找一种能高效完成乘法操作并且不会爆 longlong 的算法，也就是快速乘。</p>
-<h3 id="代码原理"><a href="#代码原理" class="headerlink" title="代码原理"></a>代码原理</h3><p>可以把 a * b这样算：<br>a * b = a + a + a + …+ a<br>而<br>a * 1 = a<br>a * 2 = 2a<br>a * 4 = 4a<br>a * 8 = 8a<br>…<br>所以可以推出：<br>a * (2 ^ k) = 2 ^ k * a</p>
-<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-
-using namespace std<span class="token punctuation">;</span>
-
-<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ll a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> p<span class="token punctuation">;</span>
-    ll ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//初始化最终的答案</span>
-    cin <span class="token operator">>></span> a <span class="token operator">>></span> b <span class="token operator">>></span> p<span class="token punctuation">;</span>
-
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//因为当b为0时将结束循环</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>b <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//若b二进制的第一位为1时执行，否则不执行，一旦遇到0，就将之前累积的a加上</span>
-            ans <span class="token operator">=</span> <span class="token punctuation">(</span>ans <span class="token operator">+</span> a<span class="token punctuation">)</span> <span class="token operator">%</span> p<span class="token punctuation">;</span>   
-    <span class="token comment" spellcheck="true">//eg: b=5 二进制写法为101  第一次循环ans=a a=2a  第二次ans=a a=4a 第三次ans=a+4a a=8a 此时b=0 循环结束</span>
-
-        a <span class="token operator">=</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">%</span> p<span class="token punctuation">;</span>
-        b <span class="token operator">>>=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将b的二进制去掉第一位，同b = b >> 1这样写是为了方便</span>
+<h3 id="2、已知链表中含有环，返回这个环的起始位置"><a href="#2、已知链表中含有环，返回这个环的起始位置" class="headerlink" title="2、已知链表中含有环，返回这个环的起始位置"></a>2、已知链表中含有环，返回这个环的起始位置</h3><p>这个问题其实不困难，有点类似脑筋急转弯,直接上代码</p>
+<pre class=" language-c"><code class="language-c">ListNode <span class="token function">detectCycle</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ListNode fast<span class="token punctuation">,</span> slow<span class="token punctuation">;</span>
+    fast <span class="token operator">=</span> slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fast <span class="token operator">==</span> slow<span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+    slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>slow <span class="token operator">!=</span> fast<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>先就这两题，后面有再补充</p>
+<h3 id="3、寻找链表的中点"><a href="#3、寻找链表的中点" class="headerlink" title="3、寻找链表的中点"></a>3、寻找链表的中点</h3><p>类似上面的思路，我们还可以让快指针一次前进两步，慢指针一次前进一步，当快指针到达链表尽头时，慢指针就处于链表的中间位置。</p>
+<pre class=" language-c"><code class="language-c">ListNode slow<span class="token punctuation">,</span> fast<span class="token punctuation">;</span>
+slow <span class="token operator">=</span> fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// slow 就在中间位置</span>
+<span class="token keyword">return</span> slow<span class="token punctuation">;</span></code></pre>
+<p>当链表的长度是奇数时，slow 恰巧停在中点位置；如果长度是偶数，slow 最终的位置是中间偏右：</p>
+<h3 id="4、寻找链表的倒数第-k-个元素"><a href="#4、寻找链表的倒数第-k-个元素" class="headerlink" title="4、寻找链表的倒数第 k 个元素"></a>4、寻找链表的倒数第 k 个元素</h3><p>我们的思路还是使用快慢指针，让快指针先走 k 步，然后快慢指针开始同速前进。这样当快指针走到链表末尾 null 时，慢指针所在的位置就是倒数第 k 个链表节点（为了简化，假设 k 不会超过链表长度）</p>
+<pre class=" language-c"><code class="language-c">ListNode slow<span class="token punctuation">,</span> fast<span class="token punctuation">;</span>
+slow <span class="token operator">=</span> fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>k<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> 
+    fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">return</span> slow<span class="token punctuation">;</span></code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当遇到有序数组时，应该优先想到双指针来解决问题，因两个指针的同时遍历会减少空间复杂度和时间复杂度。</p>
 
             </div>
             <hr/>
@@ -553,7 +572,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/01/31/wei/">https://wangxujunjie.github.io/2021/01/31/wei/</a>
+                    <a href="https://wangxujunjie.github.io/2021/02/01/2021.2.1-shuang-zhi-zhen/">https://wangxujunjie.github.io/2021/02/01/2021.2.1-shuang-zhi-zhen/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -591,8 +610,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                                    <span class="chip bg-color">位运算</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                    <span class="chip bg-color">算法 双指针</span>
                                 </a>
                             
                         </div>
@@ -762,12 +781,56 @@ using namespace std<span class="token punctuation">;</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02/02/2021-2-2-hua-dong-chuang-kou-suan-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="滑动窗口算法">
+                        
+                        <span class="card-title">滑动窗口算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            无可匹敌的力量
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            再也不会
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88-%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">双指针 算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/31/wei/">
+                <a href="/2021/01/31/2021.1.31-wei-yun-suan-li-ti/">
                     <div class="card-image">
                         
                         
@@ -794,57 +857,11 @@ using namespace std<span class="token punctuation">;</span>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/31/quanpailie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="全排列">
-                        
-                        <span class="card-title">全排列</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            心静何来多梦，苦索不如随缘
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            再也不会
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/STL/">
-                        <span class="chip bg-color">STL</span>
+                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BF%AB%E9%80%9F%E5%B9%82-%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">位运算 快速幂 算法</span>
                     </a>
                     
                 </div>
