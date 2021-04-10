@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-04-10T11:10:50.946Z</updated>
+  <updated>2021-04-10T13:14:19.798Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法中对于多组数据的处理</title>
+    <link href="https://wangxujunjie.github.io/2021/04/10/suan-fa-zhong-dui-yu-duo-zu-shu-ju-de-chu-li/"/>
+    <id>https://wangxujunjie.github.io/2021/04/10/suan-fa-zhong-dui-yu-duo-zu-shu-ju-de-chu-li/</id>
+    <published>2021-04-10T12:54:11.000Z</published>
+    <updated>2021-04-10T13:14:19.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在做OJ题目的时候，遇到这种要求&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“输入数据有多组”&lt;/strong&gt;&lt;br&gt;作为一个资深受害者，我总结了以下几种情况&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;第一种，最简单的，告知有多少组数据，每组输入中包含救命的n，然后是n个数据&lt;/s</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="https://wangxujunjie.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>博弈论</title>

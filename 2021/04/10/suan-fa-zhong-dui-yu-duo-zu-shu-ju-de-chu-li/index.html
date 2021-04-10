@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="博弈论, 再也の不会">
+    <meta name="keywords" content="算法中对于多组数据的处理, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博弈论 | 再也の不会</title>
+    <title>算法中对于多组数据的处理 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博弈论</h1>
+                    <h1 class="description center-align post-title">算法中对于多组数据的处理</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
-                                <span class="chip bg-color">博弈论</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -488,101 +488,68 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、巴什博奕（Bash-Game）"><a href="#一、巴什博奕（Bash-Game）" class="headerlink" title="一、巴什博奕（Bash Game）"></a>一、巴什博奕（Bash Game）</h2><p>1.游戏规则：<br>只有一堆n个物品，两个人轮流从这堆物品中取物， 规定每次至少取一个，最多取m个。最后取光者得胜。</p>
-<p>2.详解:<br>显然，如果n=m+1，那么由于一次最多只能取m个，所以，无论先取者拿走多少个，后取者都能够一次拿走剩余的物品，后者取胜。因此我们发现了如何取胜的法则:如果n=(m+1)r+s，(r为任意自然数，s≤m),那么先取者要拿走s个物品，如果后取者拿走k(≤m)个，那么先取者再拿走m+1-k个，结果剩下(m+1)(r-1)个，以后保持这样的取法，那么先取者肯定获胜。总之，要保持给对手留下(m+1)的倍数，就能最后获胜。</p>
+                <p>最近在做OJ题目的时候，遇到这种要求</p>
+<p><strong>“输入数据有多组”</strong><br>作为一个资深受害者，我总结了以下几种情况</p>
 <hr>
-<p>对于巴什博弈，那么我们规定，如果最后取光者输，那么又会如何呢?</p>
-<p><strong>当 n % (m+1) = 0时，后手必胜。</strong></p>
-<p><strong>当 n % (m+1) != 0时，先手必胜。</strong></p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>1.变形玩法：两个人轮流报数，每次至少1个数，最多报10个数字，谁先报到100取胜。<br>2.只有一堆n个石子，两个人轮流从这堆石子中取石子，规定每次至少取一个，最多取m个，最后取完的人获胜。</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span> </span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span> 
-    <span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span> 
-    cin<span class="token operator">>></span>n<span class="token operator">>></span>m<span class="token punctuation">;</span> 
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span> 
-        cout<span class="token operator">&lt;&lt;</span><span class="token string">"first win"</span><span class="token punctuation">;</span> 
-    <span class="token keyword">else</span> 
-        cout<span class="token operator">&lt;&lt;</span><span class="token string">"second win"</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span></code></pre>
-<h2 id="二、威佐夫博弈（Wythoff-Game）"><a href="#二、威佐夫博弈（Wythoff-Game）" class="headerlink" title="二、威佐夫博弈（Wythoff Game）"></a>二、威佐夫博弈（Wythoff Game）</h2><p>有两堆各若干的物品，两人轮流从其中一堆取至少一件物品，至多不限，或从两堆中同时取相同件物品，规定最后取完者胜利。</p>
-<p>直接说结论了，若两堆物品的初始值为（x，y），且 x &lt; y，则另z=y-x;</p>
-<p>记w=(int)[(sqrt(5)+1)/2)*z]；</p>
-<p><strong>若w=x，则先手必败，否则先手必胜</strong>。</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<p><strong>第一种，最简单的，告知有多少组数据，每组输入中包含救命的n，然后是n个数据</strong>。</p>
+<p>例如：输入m组数据，每组数据n个。</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
 using namespace std<span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n1<span class="token punctuation">,</span>n2<span class="token punctuation">,</span>temp<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>n1<span class="token operator">>></span>n2<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>n1<span class="token operator">></span>n2<span class="token punctuation">)</span>  <span class="token function">swap</span><span class="token punctuation">(</span>n1<span class="token punctuation">,</span>n2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        temp<span class="token operator">=</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n2<span class="token operator">-</span>n1<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">5.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//floor()函数，向下取整</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token operator">==</span>n1<span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"后手必胜"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token keyword">else</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"先手必胜"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> m<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> m<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>m<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> a<span class="token operator">=</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//动态分配内存，贼la好用</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+            cin <span class="token operator">>></span> a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="三、尼姆博弈（Nimm-Game）"><a href="#三、尼姆博弈（Nimm-Game）" class="headerlink" title="三、尼姆博弈（Nimm Game）"></a>三、尼姆博弈（Nimm Game）</h2><p>尼姆博弈指的是这样一个博弈游戏：有任意堆物品，每堆物品的个数是任意的，双方轮流从中取物品，每一次只能从一堆物品中取部分或全部物品，最少取一件，取到最后一件物品的人获胜。</p>
-<p>结论就是：<strong>把每堆物品数全部异或起来</strong>，如果得到的值为0，那么先手必败，否则先手必胜。</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<br/>
+<br/>
+
+<p><strong>第二种，未告知有多少组数据，每组输入中包含救命的n，然后是n个数据，当n为0的时候结束输入</strong>。</p>
+<p>例如：每组数据包含n以及n个数，当n为0的时候结束输入。(这种就比较隐式)</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
 using namespace std<span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">,</span>ans<span class="token punctuation">,</span>temp<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>n<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            cin<span class="token operator">>></span>ans<span class="token punctuation">;</span>
-            temp<span class="token operator">^</span><span class="token operator">=</span>ans<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>  cout<span class="token operator">&lt;&lt;</span><span class="token string">"后手必胜"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token keyword">else</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"先手必胜"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cin <span class="token operator">>></span> n <span class="token operator">&amp;&amp;</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> a<span class="token operator">=</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">!=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            cin <span class="token operator">>></span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="四、斐波那契博弈"><a href="#四、斐波那契博弈" class="headerlink" title="四、斐波那契博弈"></a>四、斐波那契博弈</h2><p>有一堆物品，两人轮流取物品，先手最少取一个，至多无上限，但不能把物品取完，之后每次取的物品数不能超过上一次取的物品数的二倍且至少为一件，取走最后一件物品的人获胜。</p>
-<p>结论是：<strong>先手胜当且仅当n不是斐波那契数</strong>（n为物品总数）</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span>  </span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span>  </span>
-using namespace std<span class="token punctuation">;</span>  
-<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//第47个斐波那契数 2971215073已经超过了整数范围</span>
-<span class="token keyword">int</span> f<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>   
-<span class="token keyword">void</span> <span class="token function">Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
-<span class="token punctuation">{</span>  
-    f<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> f<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>N<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>  
-        f<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> f<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">+</span> f<span class="token punctuation">[</span>i<span class="token number">-2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  
-<span class="token punctuation">}</span>    
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
-<span class="token punctuation">{</span>  
-    <span class="token function">Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//int最大数值是2147483647</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>n<span class="token punctuation">)</span>  
-    <span class="token punctuation">{</span>  
-        <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>  
-        bool flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>N<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//所以只需要枚举到N即可</span>
-        <span class="token punctuation">{</span>  
-            <span class="token keyword">if</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> n<span class="token punctuation">)</span>  
-            <span class="token punctuation">{</span>  
-                flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  
-                <span class="token keyword">break</span><span class="token punctuation">;</span>  
-            <span class="token punctuation">}</span>  
-        <span class="token punctuation">}</span>  
-        <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Second win"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
-        <span class="token keyword">else</span>     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"First win"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
-    <span class="token punctuation">}</span>  
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>  
-<span class="token punctuation">}</span> </code></pre>
+<br/>
+<br/>
+
+<p><strong>第三种，什么都不说，只管输入，甚至没告诉怎么结束的</strong>。（多见于字符串处理）</p>
+<p>例如：输入多组字符串（和输入无关的一个字都不多写╭(╯^╰)╮）。</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string s<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cin <span class="token operator">>></span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//TODO</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<br/>
+<br/>
+最后正经地总结一下，对于此类题目，是可以采取“输入一组输出一组”方法处理的，大家不用想到“我一定要等多组数据全部输入以后再一次性输出”的这种刁钻的角度。实际上，在OJ或ACM测评机中，采用的是“管道原理”（胡诌一个名词），测评机是能够一次性把所有的数据读入，然后再将所有输出结果吐出，与标准答案进行比对。
+<br/>
+<br/>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33988055/article/details/79090719/">原文链接请戳这里</a></p>
 
             </div>
             <hr/>
@@ -608,7 +575,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/04/10/bo-yi-lun/">https://wangxujunjie.github.io/2021/04/10/bo-yi-lun/</a>
+                    <a href="https://wangxujunjie.github.io/2021/04/10/suan-fa-zhong-dui-yu-duo-zu-shu-ju-de-chu-li/">https://wangxujunjie.github.io/2021/04/10/suan-fa-zhong-dui-yu-duo-zu-shu-ju-de-chu-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -646,8 +613,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
-                                    <span class="chip bg-color">博弈论</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -817,9 +784,10 @@ using namespace std<span class="token punctuation">;</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/10/suan-fa-zhong-dui-yu-duo-zu-shu-ju-de-chu-li/">
                     <div class="card-image">
@@ -837,9 +805,9 @@ using namespace std<span class="token punctuation">;</span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -848,6 +816,7 @@ using namespace std<span class="token punctuation">;</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -866,24 +835,24 @@ using namespace std<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/08/2021.4.8-er-fen-cha-zhao-suan-fa-xi-jie/">
+                <a href="/2021/04/10/bo-yi-lun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="二分查找算法细节">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="博弈论">
                         
-                        <span class="card-title">二分查找算法细节</span>
+                        <span class="card-title">博弈论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            凌驾一切的战力
+                            从不后撤
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
                             </span>
                         <span class="publish-author">
                             
@@ -896,8 +865,8 @@ using namespace std<span class="token punctuation">;</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
+                    <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
+                        <span class="chip bg-color">博弈论</span>
                     </a>
                     
                 </div>
