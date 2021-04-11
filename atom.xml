@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-04-10T13:14:19.798Z</updated>
+  <updated>2021-04-11T09:08:55.871Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>约瑟夫环</title>
+    <link href="https://wangxujunjie.github.io/2021/04/11/yue-se-fu-huan/"/>
+    <id>https://wangxujunjie.github.io/2021/04/11/yue-se-fu-huan/</id>
+    <published>2021-04-11T08:18:45.000Z</published>
+    <updated>2021-04-11T09:08:55.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;约瑟夫问题&quot;&gt;&lt;a href=&quot;#约瑟夫问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数论" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>算法中对于多组数据的处理</title>
@@ -47,7 +70,7 @@
     <link href="https://wangxujunjie.github.io/2021/04/10/bo-yi-lun/"/>
     <id>https://wangxujunjie.github.io/2021/04/10/bo-yi-lun/</id>
     <published>2021-04-10T09:14:05.000Z</published>
-    <updated>2021-04-10T11:10:50.946Z</updated>
+    <updated>2021-04-11T08:20:03.795Z</updated>
     
     
       
@@ -94,7 +117,7 @@
     <link href="https://wangxujunjie.github.io/2021/03/29/2021.3.29-lian-biao/"/>
     <id>https://wangxujunjie.github.io/2021/03/29/2021.3.29-lian-biao/</id>
     <published>2021-03-29T12:39:00.000Z</published>
-    <updated>2021-03-29T13:11:23.831Z</updated>
+    <updated>2021-04-11T08:20:11.307Z</updated>
     
     
       
@@ -140,7 +163,7 @@
     <link href="https://wangxujunjie.github.io/2021/02/02/2021-2-2-hua-dong-chuang-kou-suan-fa/"/>
     <id>https://wangxujunjie.github.io/2021/02/02/2021-2-2-hua-dong-chuang-kou-suan-fa/</id>
     <published>2021-02-02T03:02:45.000Z</published>
-    <updated>2021-02-02T03:52:28.641Z</updated>
+    <updated>2021-04-11T08:19:57.026Z</updated>
     
     
       
@@ -301,7 +324,7 @@
     <link href="https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/"/>
     <id>https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/</id>
     <published>2021-01-26T16:00:00.000Z</published>
-    <updated>2021-04-09T05:06:54.292Z</updated>
+    <updated>2021-04-11T08:20:35.719Z</updated>
     
     
       
@@ -327,7 +350,7 @@
     <link href="https://wangxujunjie.github.io/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/"/>
     <id>https://wangxujunjie.github.io/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/</id>
     <published>2021-01-08T16:00:00.000Z</published>
-    <updated>2021-04-09T05:06:37.394Z</updated>
+    <updated>2021-04-11T08:20:17.635Z</updated>
     
     
       
@@ -353,7 +376,7 @@
     <link href="https://wangxujunjie.github.io/2021/01/08/hello-world/"/>
     <id>https://wangxujunjie.github.io/2021/01/08/hello-world/</id>
     <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-04-09T05:06:27.308Z</updated>
+    <updated>2021-04-11T08:20:48.657Z</updated>
     
     
       
@@ -368,6 +391,8 @@
     
     <category term="新的起点" scheme="https://wangxujunjie.github.io/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     
+    
+    <category term="随笔" scheme="https://wangxujunjie.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
