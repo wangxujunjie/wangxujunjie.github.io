@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="有关链表环判断的问题, 再也の不会">
+    <meta name="keywords" content="KMP算法, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>有关链表环判断的问题 | 再也の不会</title>
+    <title>KMP算法 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">有关链表环判断的问题</h1>
+                    <h1 class="description center-align post-title">KMP算法</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/">
-                                <span class="chip bg-color">链表 面试</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">字符串 KMP算法</span>
                             </a>
                         
                     </div>
@@ -467,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-29
+                    2021-05-07
                 </div>
                 
 
@@ -488,108 +488,38 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-如何判断是否有环"><a href="#1-如何判断是否有环" class="headerlink" title="1.如何判断是否有环?"></a>1.如何判断是否有环?</h3><p>如果有两个头结点指针，一个走的快，一个走的慢，那么若干步以后，快的指针总会超过慢的指针一圈。</p>
-<h3 id="2-如何计算环的长度"><a href="#2-如何计算环的长度" class="headerlink" title="2.如何计算环的长度?"></a>2.如何计算环的长度?</h3><p>第一次相遇（超一圈）时开始计数，第二次相遇时停止计数。</p>
-<h3 id="3-如何判断环的入口点"><a href="#3-如何判断环的入口点" class="headerlink" title="3.如何判断环的入口点?"></a>3.如何判断环的入口点?</h3><p>碰撞点p到连接点的距离=头指针到连接点的距离，因此，分别从碰撞点、头指针开始走，相遇的那个点就是连接点。<br>为什么呢？需要一个简单的计算过程：</p>
-<p>(1) 当fast与slow相遇时，show肯定没有走完链表，而fast已经在还里走了n（n&gt;= 1）圈。假设slow走了s步，<br>那么fast走了2s步。fast的步数还等于s走的加上环里转的n圈，所以有： 2s = s + nr。因此，s = nr。</p>
-<p>(2) 设整个链表长为L，入口据相遇点x，起点到入口的距离为a。因为slow指针并没有走完一圈，<br>所以：a + x = s，带入第一步的结果有：a + x = nr = (n-1)r + r = (n-1)r + L - a；<br>即：a = (n-1)r + L -a -x;</p>
-<p>这说明：从头结点到入口的距离，等于转了(n-1)圈以后，相遇点到入口的距离。因此，我们可以在链表头、相遇点各设一个指针，<br>每次各走一步，两个指针必定相遇，且相遇第一点为环入口点。</p>
-<h3 id="4-如何判断两个链表（不带环）是否相交"><a href="#4-如何判断两个链表（不带环）是否相交" class="headerlink" title="4.如何判断两个链表（不带环）是否相交?"></a>4.如何判断两个链表（不带环）是否相交?</h3><p>将其中的一个链表首尾相连，然后判断另一个链表是否带环即可。这个比较简单，程序就省略了。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">typedef</span> <span class="token keyword">struct</span> Node
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
-    Node <span class="token operator">*</span>next<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>Node<span class="token punctuation">,</span><span class="token operator">*</span>pNode<span class="token punctuation">;</span>
-
-
-<span class="token comment" spellcheck="true">//判断是否有环</span>
-bool <span class="token function">isLoop</span><span class="token punctuation">(</span>pNode pHead<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    pNode fast <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    pNode slow <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//如果无环，则fast先走到终点</span>
-    <span class="token comment" spellcheck="true">//当链表长度为奇数时，fast->Next为空</span>
-    <span class="token comment" spellcheck="true">//当链表长度为偶数时，fast为空</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span> fast <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> fast<span class="token operator">-></span>next <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-
-        fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//如果有环，则fast会超过slow一圈</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> slow<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <p>来源：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-strstr/solution/shua-chuan-lc-shuang-bai-po-su-jie-fa-km-tb86/">三叶姐的这篇题解，比较详细</a></p>
+<h3 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h3><p>KMP 算法是一个快速查找匹配串的算法，它的作用其实就是本题问题：如何快速在「原字符串」中找到「匹配字符串」。<br>上述的朴素解法，不考虑剪枝的话复杂度是 O(m * n)的，而 KMP 算法的复杂度为 O(m + n)。<br>KMP 之所以能够在 O(m + n)复杂度内完成查找，是因为其能在「非完全匹配」的过程中提取到有效信息进行复用，以减少「重复匹配」的消耗。<br><br/><br>先记下模板，其他的后面再补吧φ(*￣0￣)</p>
+<h3 id="代码模板"><a href="#代码模板" class="headerlink" title="代码模板"></a>代码模板</h3><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+题目描述：
+给你两个字符串 haystack 和 needle,请你在 haystack 字符串中找出 
+needle字符串出现的第一个位置(下标从 0 开始).如果不存在,则返回-1。
+*/</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    <span class="token keyword">int</span> <span class="token function">strStr</span><span class="token punctuation">(</span>string s<span class="token punctuation">,</span> string p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>m <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//设置哨兵</span>
+        s<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">next</span><span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//预处理next数组</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>j and p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> p<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> j <span class="token operator">=</span> next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> p<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> j<span class="token operator">++</span><span class="token punctuation">;</span>
+            next<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> <span class="token constant">NULL</span> <span class="token operator">||</span> fast<span class="token operator">-></span>next <span class="token operator">==</span> <span class="token constant">NULL</span>  <span class="token punctuation">)</span>
-        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token keyword">else</span>
-        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">//计算环的长度</span>
-<span class="token keyword">int</span> <span class="token function">loopLength</span><span class="token punctuation">(</span>pNode pHead<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">isLoop</span><span class="token punctuation">(</span>pHead<span class="token punctuation">)</span> <span class="token operator">==</span> false<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    pNode fast <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    pNode slow <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    bool begin <span class="token operator">=</span> false<span class="token punctuation">;</span>
-    bool agian <span class="token operator">=</span> false<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span> fast <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> fast<span class="token operator">-></span>next <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//超两圈后停止计数，挑出循环</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> slow <span class="token operator">&amp;&amp;</span> agian <span class="token operator">==</span> true<span class="token punctuation">)</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//超一圈后开始计数</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> slow <span class="token operator">&amp;&amp;</span> agian <span class="token operator">==</span> false<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>            
-            begin <span class="token operator">=</span> true<span class="token punctuation">;</span>
-            agian <span class="token operator">=</span> true<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//匹配过程</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>j and s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> p<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> j <span class="token operator">=</span> next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> p<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> j<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>j <span class="token operator">==</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> i <span class="token operator">-</span> m<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">//计数</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>begin <span class="token operator">==</span> true<span class="token punctuation">)</span>
-            <span class="token operator">++</span>length<span class="token punctuation">;</span>
-
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> length<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-<span class="token comment" spellcheck="true">//求出环的入口点</span>
-Node<span class="token operator">*</span> <span class="token function">findLoopEntrance</span><span class="token punctuation">(</span>pNode pHead<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    pNode fast <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    pNode slow <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span> fast <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> fast<span class="token operator">-></span>next <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-
-        fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//如果有环，则fast会超过slow一圈</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> slow<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>fast <span class="token operator">==</span> <span class="token constant">NULL</span> <span class="token operator">||</span> fast<span class="token operator">-></span>next <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-    slow <span class="token operator">=</span> pHead<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>slow <span class="token operator">!=</span> fast<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 
             </div>
             <hr/>
@@ -615,7 +545,7 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/03/29/2021.3.29-lian-biao/">https://wangxujunjie.github.io/2021/03/29/2021.3.29-lian-biao/</a>
+                    <a href="https://wangxujunjie.github.io/2021/05/07/kmp-suan-fa/">https://wangxujunjie.github.io/2021/05/07/kmp-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -653,8 +583,8 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/">
-                                    <span class="chip bg-color">链表 面试</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">字符串 KMP算法</span>
                                 </a>
                             
                         </div>
@@ -824,29 +754,30 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/08/2021.4.8-er-fen-cha-zhao-suan-fa-xi-jie/">
+                <a href="/2021/05/07/kmp-suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="二分查找算法细节">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="KMP算法">
                         
-                        <span class="card-title">二分查找算法细节</span>
+                        <span class="card-title">KMP算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            凌驾一切的战力
+                            这种事不试试怎么知道！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -855,11 +786,12 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">字符串 KMP算法</span>
                     </a>
                     
                 </div>
@@ -873,24 +805,24 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/15/you-xian-dui-lie-de-zi-ding-yi-pai-xu/">
+                <a href="/2021/05/07/zi-fu-chuan-ha-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="优先队列的自定义排序">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="字符串哈希">
                         
-                        <span class="card-title">优先队列的自定义排序</span>
+                        <span class="card-title">字符串哈希</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            见识一下真正的气魄吧
+                            海贼王我当定了
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
                             </span>
                         <span class="publish-author">
                             
@@ -903,8 +835,8 @@ Node<span class="token operator">*</span> <span class="token function">findLoopE
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/STL-%E5%A0%86/">
-                        <span class="chip bg-color">STL 堆</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">字符串 哈希算法</span>
                     </a>
                     
                 </div>

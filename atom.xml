@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-04-11T09:08:55.871Z</updated>
+  <updated>2021-05-07T11:48:46.498Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KMP算法</title>
+    <link href="https://wangxujunjie.github.io/2021/05/07/kmp-suan-fa/"/>
+    <id>https://wangxujunjie.github.io/2021/05/07/kmp-suan-fa/</id>
+    <published>2021-05-07T11:31:54.000Z</published>
+    <updated>2021-05-07T11:48:46.498Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;来源：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="字符串 KMP算法" scheme="https://wangxujunjie.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串哈希</title>
+    <link href="https://wangxujunjie.github.io/2021/05/07/zi-fu-chuan-ha-xi/"/>
+    <id>https://wangxujunjie.github.io/2021/05/07/zi-fu-chuan-ha-xi/</id>
+    <published>2021-05-07T11:14:14.000Z</published>
+    <updated>2021-05-07T11:31:01.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;子串查找（哈希模板）&quot;&gt;&lt;a href=&quot;#子串查找（哈希模板）&quot; class=&quot;headerlink&quot; title=&quot;子串查找（哈希模板）&quot;&gt;&lt;/a&gt;子串查找（哈希模板）&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="字符串 哈希算法" scheme="https://wangxujunjie.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>约瑟夫环</title>
