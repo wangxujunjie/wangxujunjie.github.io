@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, 再也の不会">
+    <meta name="keywords" content="曲线(题解), 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | 再也の不会</title>
+    <title>曲线(题解) | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">曲线(题解)</h1>
                 </div>
             </div>
         </div>
@@ -344,10 +344,105 @@ if (windowWidth > 768) {
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -356,23 +451,14 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
+                                <span class="chip bg-color">二分与三分 牛客</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/" class="post-category">
-                                新的起点
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -381,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-08
+                    2021-05-11
                 </div>
                 
 
@@ -402,12 +488,44 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="佛系更新中"><a href="#佛系更新中" class="headerlink" title="佛系更新中"></a>佛系更新中</h2><h2 id="一giao我了giao"><a href="#一giao我了giao" class="headerlink" title="一giao我了giao"></a>一giao我了giao</h2><hr>
-<pre class=" language-bash"><code class="language-bash">
-   终于能抽出些时间来整理我的博客了，今后我会将我平时的刷算法的经
-验以及好的技巧上传至博客，希望能够对刚开始学习算法的同学有一些帮助
-
-</code></pre>
+                <h3 id="二分与三分"><a href="#二分与三分" class="headerlink" title="二分与三分"></a>二分与三分</h3><hr>
+<p>又到了学习代码的时间，这次是在信息学奥赛提高篇上看到的知识点–二分与三分。<br>二分，即数学中经常使用的二分法，对于区间[a,b]上连续不断且 f(a)·f(b)&lt;0 的函数 y=f(x),通过不断地把函数f(x)的零点所在的区间一分为二,使区间的两个端点逐步逼近零点,进而得到零点近似值的方法叫二分法。</p>
+<p>三分，即在区间内用两个mid将区间分成三份,这样的查找算法称为三分查找,也就是三分法,三分法常用于求解单峰函数的最值。同时还有一种理解,即在二分查找的基础上,在左区间或者右区间上再进行一次二分。</p>
+<p>二分法适用于单调函数,而三分法用于单峰函数。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/image.2ibvz21sza20.png"></p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>2<br>1<br>2 0 0<br>2<br>2 0 0<br>2 -4 2</p>
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>0.0000<br>0.5000</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由于函数S是开口向上的二次函数（当a=0时，是一次函数）,由S的定义可知,S或者是一个先单调递减,后单调递增的下凸函数,或者是一个单调函数, F（x）=max(Si(x))也满足单调性。选用三分法很容易求得某个区间内的最小值</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e5</span><span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+<span class="token keyword">double</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>c<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">double</span> maxx<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1e9</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+      maxx<span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>maxx<span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">*</span>x<span class="token operator">+</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">+</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> maxx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>t<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> cin<span class="token operator">>></span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> l<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token operator">>=</span><span class="token number">1e-11</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">double</span> m1<span class="token operator">=</span>l<span class="token operator">+</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">,</span>m2<span class="token operator">=</span>r<span class="token operator">-</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">f</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token function">f</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">)</span> r<span class="token operator">=</span>m2<span class="token punctuation">;</span>
+            <span class="token keyword">else</span> l<span class="token operator">=</span>m1<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cout<span class="token operator">&lt;&lt;</span>fixed<span class="token operator">&lt;&lt;</span><span class="token function">setprecision</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">f</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//保留四位小数</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> </code></pre>
 
             </div>
             <hr/>
@@ -433,7 +551,7 @@ if (windowWidth > 768) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/01/08/hello-world/">https://wangxujunjie.github.io/2021/01/08/hello-world/</a>
+                    <a href="https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/">https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -471,8 +589,8 @@ if (windowWidth > 768) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
+                                    <span class="chip bg-color">二分与三分 牛客</span>
                                 </a>
                             
                         </div>
@@ -642,29 +760,76 @@ if (windowWidth > 768) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/">
+                <a href="/2021/05/11/li-ti-1-qu-xian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="最大公约数和最小公倍数">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="曲线(题解)">
                         
-                        <span class="card-title">最大公约数和最小公倍数</span>
+                        <span class="card-title">曲线(题解)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            夫志当志存高远
+                            我自有安排
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            再也不会
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
+                        <span class="chip bg-color">二分与三分 牛客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/07/kmp-suan-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="KMP算法">
+                        
+                        <span class="card-title">KMP算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这种事不试试怎么知道！
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -676,62 +841,8 @@ if (windowWidth > 768) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                        <span class="chip bg-color">数学</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/08/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
-                        
-                        <span class="card-title">我的第一篇博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            学如逆水行舟，不进则退
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/" class="post-category">
-                                    新的起点
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">字符串 KMP算法</span>
                     </a>
                     
                 </div>
@@ -770,6 +881,100 @@ if (windowWidth > 768) {
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
