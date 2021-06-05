@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="二分查找算法细节, 再也の不会">
+    <meta name="keywords" content="mfc中将spin和slider关联的小设置, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二分查找算法细节 | 再也の不会</title>
+    <title>mfc中将spin和slider关联的小设置 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二分查找算法细节</h1>
+                    <h1 class="description center-align post-title">mfc中将spin和slider关联的小设置</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                                <span class="chip bg-color">二分查找</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -467,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-08
+                    2021-06-05
                 </div>
                 
 
@@ -488,48 +488,10 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我周围的人几乎都认为二分查找很简单，但事实真的如此吗？二分查找真的很简单吗？并不简单。看看 Knuth 大佬（发明 KMP 算法的那位）怎么说的：</p>
-<p>Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky…</p>
-<p>这句话可以这样理解：思路很简单，细节是魔鬼<br>本文就来探究几个最常用的二分查找场景：寻找一个数、寻找左侧边界、寻找右侧边界。</p>
-<p>而且，我们就是要深入细节，<strong>比如while循环中的不等号是否应该带等号，mid 是否应该加一</strong>等等。分析这些细节的差异以及出现这些差异的原因，保证你能灵活准确地写出正确的二分查找算法。</p>
-<h2 id="二分查找框架"><a href="#二分查找框架" class="headerlink" title="二分查找框架"></a>二分查找框架</h2><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>right <span class="token operator">+</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p><strong>分析二分查找的一个技巧是：不要出现 else，而是把所有情况用 else if 写清楚，这样可以清楚地展现所有细节</strong>。本文都会使用 else if，旨在讲清楚，读者理解后可自行简化。</p>
-<p><strong>其中…标记的部分，就是可能出现细节问题的地方，当你见到一个二分查找的代码时，首先注意这几个地方</strong>。后文用实例分析这些地方能有什么样的变化。</p>
-<p>另外声明一下，</font><font color=red>计算 mid 时需要技巧防止溢出，建议写成: mid = left + (right - left) / 2</font>，本文暂时不讨论这个问题。</p>
-<h2 id="一、寻找一个数-基本的二分搜索"><a href="#一、寻找一个数-基本的二分搜索" class="headerlink" title="一、寻找一个数(基本的二分搜索)"></a>一、寻找一个数(基本的二分搜索)</h2><p>这个场景是最简单的，肯能也是大家最熟悉的，即搜索一个数，如果存在，返回其索引，否则返回 -1。</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 注意</span>
-
-    <span class="token keyword">while</span><span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 注意</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>right <span class="token operator">+</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span>
-            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 注意</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span>
-            right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 注意</span>
-        <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="1、为什么-while-循环的条件中是-lt-，而不是-lt-？"><a href="#1、为什么-while-循环的条件中是-lt-，而不是-lt-？" class="headerlink" title="1、为什么 while 循环的条件中是 &lt;=，而不是 &lt;？"></a>1、为什么 while 循环的条件中是 &lt;=，而不是 &lt;？</h3><p>答：因为初始化 right 的赋值是 nums.length - 1，即最后一个元素的索引，而不是 nums.length。</p>
-<p>这二者可能出现在不同功能的二分查找中，区别是：<strong>前者相当于两端都闭区间 [left, right]，后者相当于左闭右开区间 [left, right)</strong>,因为索引大小为 nums.length 是越界的。</p>
-<p>我们这个算法中使用的是 <strong>[left, right] 两端都闭的区间。这个区间就是每次进行搜索的区间，我们不妨称为「搜索区间」</strong>(search space)。</p>
-<p>什么时候应该停止搜索呢？当然，找到了目标值的时候可以终止：</p>
+                <p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/mfc%EF%BC%88spin%E5%92%8Cslider%EF%BC%89%E8%AE%BE%E7%BD%AE.6emzr3nc91c0.png" alt="效果截图"></p>
+<pre><code>没改前，按上下箭头，滑动是没有任何反应的，并且编辑框中的数字也不会变化。</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/mfc%EF%BC%88spin%E5%92%8Cslider%EF%BC%892.52if4zl4wfg0.png" alt="具体设置"></p>
+<p>主要是注意里面的参数，vc6++默认生成的参数跟这个不一样，需要手动改一下。</p>
 
             </div>
             <hr/>
@@ -545,7 +507,7 @@ if (windowWidth > 768) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">再也不会</a>
+                    <a href="/about" rel="external nofollow noreferrer">再也の不会</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -555,7 +517,7 @@ if (windowWidth > 768) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/04/08/2021.4.8-er-fen-cha-zhao-suan-fa-xi-jie/">https://wangxujunjie.github.io/2021/04/08/2021.4.8-er-fen-cha-zhao-suan-fa-xi-jie/</a>
+                    <a href="https://wangxujunjie.github.io/2021/06/05/mfc-hua-kuai/">https://wangxujunjie.github.io/2021/06/05/mfc-hua-kuai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -568,7 +530,7 @@ if (windowWidth > 768) {
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">再也不会</a>
+                    <a href="/about" target="_blank">再也の不会</a>
                     !
                 </span>
             </div>
@@ -593,8 +555,8 @@ if (windowWidth > 768) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                                    <span class="chip bg-color">二分查找</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -764,42 +726,44 @@ if (windowWidth > 768) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/10/bo-yi-lun/">
+                <a href="/2021/06/05/mfc-hua-kuai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="博弈论">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="mfc中将spin和slider关联的小设置">
                         
-                        <span class="card-title">博弈论</span>
+                        <span class="card-title">mfc中将spin和slider关联的小设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            从不后撤
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            再也不会
+                            再也の不会
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
-                        <span class="chip bg-color">博弈论</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
@@ -813,24 +777,24 @@ if (windowWidth > 768) {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/29/2021.3.29-lian-biao/">
+                <a href="/2021/05/21/shi-da-pai-xu-suan-fa-da-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="有关链表环判断的问题">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="十大排序算法大总结">
                         
-                        <span class="card-title">有关链表环判断的问题</span>
+                        <span class="card-title">十大排序算法大总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            逃避是懦夫的选择
+                            不要随随便便同情失败者,这会伤了他的自尊心
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
                             </span>
                         <span class="publish-author">
                             
@@ -843,8 +807,8 @@ if (windowWidth > 768) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">链表 面试</span>
+                    <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">排序算法</span>
                     </a>
                     
                 </div>
