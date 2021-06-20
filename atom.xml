@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-06-05T08:47:19.543Z</updated>
+  <updated>2021-06-20T13:00:44.552Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网址汇总</title>
+    <link href="https://wangxujunjie.github.io/2021/06/20/wang-zhi-hui-zong/"/>
+    <id>https://wangxujunjie.github.io/2021/06/20/wang-zhi-hui-zong/</id>
+    <published>2021-06-20T12:58:42.000Z</published>
+    <updated>2021-06-20T13:00:44.552Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 align=&quot;center&quot;&gt;
+    &lt;br&gt;
+    &lt;img width=&quot;200&quot; src=&quot;https://cdn.rawgit.com/sindresorhus/awesome/master/media/logo.svg&quot; alt=&quot;awesome&quot;&gt;
+  </summary>
+        
+      
+    
+    
+    
+    
+    <category term="资源汇总" scheme="https://wangxujunjie.github.io/tags/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>mfc中将spin和slider关联的小设置</title>
@@ -449,32 +475,6 @@
         
     <summary type="html">&lt;h2 id=&quot;分解质因子&quot;&gt;&lt;a href=&quot;#分解质因子&quot; class=&quot;headerlink&quot; title=&quot;分解质因子&quot;&gt;&lt;/a&gt;分解质因子&lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;&amp;emsp;&amp;emsp;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="https://wangxujunjie.github.io/tags/C/"/>
-    
-    <category term="数学" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最大公约数和最小公倍数</title>
-    <link href="https://wangxujunjie.github.io/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/"/>
-    <id>https://wangxujunjie.github.io/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/</id>
-    <published>2021-01-08T16:00:00.000Z</published>
-    <updated>2021-04-11T08:20:17.635Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、最大公约数和最小公约数的关系&quot;&gt;&lt;a href=&quot;#一、最大公约数和最小公约数的关系&quot; class=&quot;headerlink&quot; title=&quot;一、最大公约数和最小公约数的关系&quot;&gt;&lt;/a&gt;一、最大公约数和最小公约数的关系&lt;/h2&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;</summary>
         
       
     
