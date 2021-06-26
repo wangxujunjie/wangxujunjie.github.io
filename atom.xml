@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-06-20T13:02:43.535Z</updated>
+  <updated>2021-06-26T12:08:09.587Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>进制转化</title>
+    <link href="https://wangxujunjie.github.io/2021/06/26/jin-zhi-zhuan-hua/"/>
+    <id>https://wangxujunjie.github.io/2021/06/26/jin-zhi-zhuan-hua/</id>
+    <published>2021-06-26T11:35:00.000Z</published>
+    <updated>2021-06-26T12:08:09.587Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;话不多说，直接上代码&lt;/p&gt;
+&lt;pre class=&quot; language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数学" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lambda表达式</title>
+    <link href="https://wangxujunjie.github.io/2021/06/26/lambda-biao-da-shi/"/>
+    <id>https://wangxujunjie.github.io/2021/06/26/lambda-biao-da-shi/</id>
+    <published>2021-06-26T03:52:40.000Z</published>
+    <updated>2021-06-26T12:04:32.724Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h2&gt;&lt;p&gt;   lambda表达式又称匿名函数（Anonymous</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++11" scheme="https://wangxujunjie.github.io/tags/C-11/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网址汇总</title>
     <link href="https://wangxujunjie.github.io/2021/06/20/wang-zhi-hui-zong/"/>
     <id>https://wangxujunjie.github.io/2021/06/20/wang-zhi-hui-zong/</id>
     <published>2021-06-20T12:58:42.000Z</published>
-    <updated>2021-06-20T13:02:43.535Z</updated>
+    <updated>2021-06-26T03:51:28.043Z</updated>
     
     
       
@@ -432,55 +479,6 @@
     
     
     <category term="CF" scheme="https://wangxujunjie.github.io/tags/CF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Codeforces Round 698 (Div. 2)</title>
-    <link href="https://wangxujunjie.github.io/2021/01/29/cf698dv2/"/>
-    <id>https://wangxujunjie.github.io/2021/01/29/cf698dv2/</id>
-    <published>2021-01-29T05:54:46.000Z</published>
-    <updated>2021-01-30T03:21:08.526Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Codeforces-Round-698-Div-2&quot;&gt;&lt;a href=&quot;#Codeforces-Round-698-Div-2&quot; class=&quot;headerlink&quot; title=&quot;Codeforces Round #698 (Div.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="CF" scheme="https://wangxujunjie.github.io/tags/CF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分解质因子</title>
-    <link href="https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/"/>
-    <id>https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/</id>
-    <published>2021-01-26T16:00:00.000Z</published>
-    <updated>2021-04-11T08:20:35.719Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;分解质因子&quot;&gt;&lt;a href=&quot;#分解质因子&quot; class=&quot;headerlink&quot; title=&quot;分解质因子&quot;&gt;&lt;/a&gt;分解质因子&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="https://wangxujunjie.github.io/tags/C/"/>
-    
-    <category term="数学" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   

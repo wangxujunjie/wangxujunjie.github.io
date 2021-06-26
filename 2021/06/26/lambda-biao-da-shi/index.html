@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="曲线(题解), 再也の不会">
+    <meta name="keywords" content="lambda表达式, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>曲线(题解) | 再也の不会</title>
+    <title>lambda表达式 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">曲线(题解)</h1>
+                    <h1 class="description center-align post-title">lambda表达式</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
-                                <span class="chip bg-color">二分与三分 牛客</span>
+                            <a href="/tags/C-11/">
+                                <span class="chip bg-color">C++11</span>
                             </a>
                         
                     </div>
@@ -467,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-11
+                    2021-06-26
                 </div>
                 
 
@@ -488,44 +488,113 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="二分与三分"><a href="#二分与三分" class="headerlink" title="二分与三分"></a>二分与三分</h3><hr>
-<p>又到了学习代码的时间，这次是在信息学奥赛提高篇上看到的知识点–二分与三分。<br>二分，即数学中经常使用的二分法，对于区间[a,b]上连续不断且 f(a)·f(b)&lt;0 的函数 y=f(x),通过不断地把函数f(x)的零点所在的区间一分为二,使区间的两个端点逐步逼近零点,进而得到零点近似值的方法叫二分法。</p>
-<p>三分，即在区间内用两个mid将区间分成三份,这样的查找算法称为三分查找,也就是三分法,三分法常用于求解单峰函数的最值。同时还有一种理解,即在二分查找的基础上,在左区间或者右区间上再进行一次二分。</p>
-<p>二分法适用于单调函数,而三分法用于单峰函数。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/image.2ibvz21sza20.png"></p>
-<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>2<br>1<br>2 0 0<br>2<br>2 0 0<br>2 -4 2</p>
-<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>0.0000<br>0.5000</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由于函数S是开口向上的二次函数（当a=0时，是一次函数）,由S的定义可知,S或者是一个先单调递减,后单调递增的下凸函数,或者是一个单调函数, F（x）=max(Si(x))也满足单调性。选用三分法很容易求得某个区间内的最小值</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+                <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>   lambda表达式又称匿名函数（Anonymous function），其构造了一个可以在其作用范围内捕获变量的函数对象。<br>lambda表达式实际为一个仿函数functor，编译器后会生成一个匿名类（注：这个类重载了()运算符）与普通函数指<br>针相比，Lambda表达式可以包含数据成员，也就是说它是可以有状态的。<br>    C++ 11 中的 Lambda 表达式用于定义并创建匿名的函数对象，以简化编程工作。</p>
+<p><strong>Lambda 的语法形式如下</strong>：<br>   [函数对象参数] (操作符重载函数参数) mutable 或 exception 声明 -&gt; 返回值类型 {函数体}</p>
+<ol>
+<li><p>如果没有参数,空的圆括号()可以省略。</p>
+</li>
+<li><p>mutable 或 exception 声明<br>这部分可以省略。按值传递函数对象参数时，加上 mutable 修饰符后，可以修改传递进来的拷贝（注意是能修改拷贝，而不是<br>值本身）。exception 声明用于指定函数抛出的异常，如抛出整数类型的异常，可以使用 throw(int)。</p>
+</li>
+<li><p>标识函数返回值的类型，当返回值为 void，或者函数体中只有一处 return 的地方（此时编译器可以自动推断出返回值类型）<br>时，返回值类型这部分也可以省略。</p>
+</li>
+</ol>
+<p><strong>关于capture里面的值如何获取</strong>：</p>
+<p><strong>[]</strong>  没有任何函数对象参数。<br><strong>[=]</strong> 函数体内可以使用 Lambda 所在范围内所有可见的局部变量（包括 Lambda 所在类的 this），并且是值传递方式（相当于编译器自动为我们按值传递了所有局部变量）。<br><strong>[&amp;]</strong> 函数体内可以使用 Lambda 所在范围内所有可见的局部变量（包括 Lambda 所在类的 this），并且是引用传递方式（相当于是编译器自动为我们按引用传递了所有局部变量）。<br><strong>[this]</strong> 函数体内可以使用 Lambda 所在类中的成员变量。<br><strong>[a]</strong> 将 a 按值进行传递。按值进行传递时，函数体内不能修改传递进来的 a 的拷贝，因为默认情况下函数是 const 的，要修改传递进来的拷贝，可以添加 mutable 修饰符。<br><strong>[&amp;a]</strong>      将 a 按引用进行传递。<br><strong>[a,&amp;b]</strong>    将 a 按值传递，b 按引用进行传递。<br><strong>[=,&amp;a,&amp;b]</strong> 除 a 和 b 按引用进行传递外，其他参数都按值进行传递。<br><strong>[&amp;,a,b]</strong>   除 a 和 b 按值进行传递外，其他参数都按引用进行传递。</p>
+<h2 id="二、捕获参数详解"><a href="#二、捕获参数详解" class="headerlink" title="二、捕获参数详解"></a>二、捕获参数详解</h2><ul>
+<li>[]表示不捕获任何变量</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">auto</span> function <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello World!"</span> <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>[var]表示值传递方式捕获变量var</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">auto</span> function <span class="token operator">=</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">{</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>[=]表示值传递方式捕获所有父作用域的变量（包括this）</li>
+</ul>
+<pre><code>int index = 1;
+int num = 100;
+auto function =[=]&#123;
+            std::cout &lt;&lt; &quot;index: &quot;&lt;&lt; index &lt;&lt; &quot;, &quot; 
+                &lt;&lt; &quot;num: &quot;&lt;&lt; num &lt;&lt; std::endl;
+    &#125;;
+
+function();</code></pre>
+<ul>
+<li>[&amp;var]表示引用传递捕捉变量var</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">auto</span> function <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">&amp;</span>num<span class="token punctuation">]</span><span class="token punctuation">{</span>
+        num <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"num: "</span> <span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>[&amp;]表示引用传递方式捕捉所有父作用域的变量（包括this）</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">auto</span> function <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">{</span>
+        num <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+        index <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"index: "</span><span class="token operator">&lt;&lt;</span> index <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> 
+            <span class="token operator">&lt;&lt;</span> <span class="token string">"num: "</span><span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>[this]表示值传递方式捕捉当前的this指针</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e5</span><span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> n<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
-<span class="token keyword">double</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>c<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span>
+
+class Lambda
 <span class="token punctuation">{</span>
-    <span class="token keyword">double</span> maxx<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1e9</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-      maxx<span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>maxx<span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">*</span>x<span class="token operator">+</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">+</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> maxx<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+public<span class="token punctuation">:</span>
+    <span class="token keyword">void</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello"</span> <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">void</span> <span class="token function">lambda</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">auto</span> function <span class="token operator">=</span> <span class="token punctuation">[</span>this<span class="token punctuation">]</span><span class="token punctuation">{</span> 
+            this<span class="token operator">-></span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>t<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> cin<span class="token operator">>></span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">double</span> l<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token operator">>=</span><span class="token number">1e-11</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">double</span> m1<span class="token operator">=</span>l<span class="token operator">+</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">,</span>m2<span class="token operator">=</span>r<span class="token operator">-</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">f</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token function">f</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">)</span> r<span class="token operator">=</span>m2<span class="token punctuation">;</span>
-            <span class="token keyword">else</span> l<span class="token operator">=</span>m1<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        cout<span class="token operator">&lt;&lt;</span>fixed<span class="token operator">&lt;&lt;</span><span class="token function">setprecision</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">f</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//保留四位小数</span>
+    Lambda demo<span class="token punctuation">;</span>
+    demo<span class="token punctuation">.</span><span class="token function">lambda</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>[=,&amp;a,&amp;b]表示以引用传递的方式捕捉变量a和b，以值传递方式捕捉其它所有变量。（[=, &amp;] 拷贝与引用混合）</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">auto</span> function <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">=</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>index<span class="token punctuation">,</span> <span class="token operator">&amp;</span>num<span class="token punctuation">]</span><span class="token punctuation">{</span>
+        num <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+        index <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"index: "</span><span class="token operator">&lt;&lt;</span> index <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> 
+            <span class="token operator">&lt;&lt;</span> <span class="token string">"num: "</span><span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> </code></pre>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>未完待续。。。</p>
 
             </div>
             <hr/>
@@ -551,7 +620,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/">https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/</a>
+                    <a href="https://wangxujunjie.github.io/2021/06/26/lambda-biao-da-shi/">https://wangxujunjie.github.io/2021/06/26/lambda-biao-da-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,8 +658,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
-                                    <span class="chip bg-color">二分与三分 牛客</span>
+                                <a href="/tags/C-11/">
+                                    <span class="chip bg-color">C++11</span>
                                 </a>
                             
                         </div>
@@ -764,24 +833,24 @@ using namespace std<span class="token punctuation">;</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/21/shi-da-pai-xu-suan-fa-da-zong-jie/">
+                <a href="/2021/06/26/jin-zhi-zhuan-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="十大排序算法大总结">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="进制转化">
                         
-                        <span class="card-title">十大排序算法大总结</span>
+                        <span class="card-title">进制转化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不要随随便便同情失败者,这会伤了他的自尊心
+                            疾风亦有归途
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
                         </span>
                         <span class="publish-author">
                             
@@ -794,8 +863,8 @@ using namespace std<span class="token punctuation">;</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">排序算法</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -809,24 +878,24 @@ using namespace std<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/07/kmp-suan-fa/">
+                <a href="/2021/06/20/wang-zhi-hui-zong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="KMP算法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="网址汇总">
                         
-                        <span class="card-title">KMP算法</span>
+                        <span class="card-title">网址汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这种事不试试怎么知道！
+                            唤醒
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
                             </span>
                         <span class="publish-author">
                             
@@ -839,8 +908,8 @@ using namespace std<span class="token punctuation">;</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">字符串 KMP算法</span>
+                    <a href="/tags/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">
+                        <span class="chip bg-color">资源汇总</span>
                     </a>
                     
                 </div>

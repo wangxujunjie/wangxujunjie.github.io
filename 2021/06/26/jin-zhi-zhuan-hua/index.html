@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="曲线(题解), 再也の不会">
+    <meta name="keywords" content="进制转化, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>曲线(题解) | 再也の不会</title>
+    <title>进制转化 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">曲线(题解)</h1>
+                    <h1 class="description center-align post-title">进制转化</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
-                                <span class="chip bg-color">二分与三分 牛客</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
@@ -467,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-11
+                    2021-06-26
                 </div>
                 
 
@@ -488,44 +488,19 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="二分与三分"><a href="#二分与三分" class="headerlink" title="二分与三分"></a>二分与三分</h3><hr>
-<p>又到了学习代码的时间，这次是在信息学奥赛提高篇上看到的知识点–二分与三分。<br>二分，即数学中经常使用的二分法，对于区间[a,b]上连续不断且 f(a)·f(b)&lt;0 的函数 y=f(x),通过不断地把函数f(x)的零点所在的区间一分为二,使区间的两个端点逐步逼近零点,进而得到零点近似值的方法叫二分法。</p>
-<p>三分，即在区间内用两个mid将区间分成三份,这样的查找算法称为三分查找,也就是三分法,三分法常用于求解单峰函数的最值。同时还有一种理解,即在二分查找的基础上,在左区间或者右区间上再进行一次二分。</p>
-<p>二分法适用于单调函数,而三分法用于单峰函数。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/image.2ibvz21sza20.png"></p>
-<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>2<br>1<br>2 0 0<br>2<br>2 0 0<br>2 -4 2</p>
-<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>0.0000<br>0.5000</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由于函数S是开口向上的二次函数（当a=0时，是一次函数）,由S的定义可知,S或者是一个先单调递减,后单调递增的下凸函数,或者是一个单调函数, F（x）=max(Si(x))也满足单调性。选用三分法很容易求得某个区间内的最小值</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e5</span><span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> n<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
-<span class="token keyword">double</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>c<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">double</span> maxx<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1e9</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-      maxx<span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>maxx<span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">*</span>x<span class="token operator">+</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">+</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> maxx<span class="token punctuation">;</span>
+                <p>话不多说，直接上代码</p>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//acwing第五次周赛第二题有用到这个知识点</span>
+
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//用来存对应位的值</span>
+<span class="token keyword">int</span> x<span class="token punctuation">,</span>k<span class="token punctuation">;</span>
+cin<span class="token operator">>></span>x<span class="token operator">>></span>k<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//x是要转化的数,k是想要转化的进制</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>x<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    a<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>x<span class="token operator">%</span>k<span class="token punctuation">;</span>
+    x<span class="token operator">/</span><span class="token operator">=</span>k<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>t<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> cin<span class="token operator">>></span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">>></span>c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">double</span> l<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token operator">>=</span><span class="token number">1e-11</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">double</span> m1<span class="token operator">=</span>l<span class="token operator">+</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">,</span>m2<span class="token operator">=</span>r<span class="token operator">-</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">f</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token function">f</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">)</span> r<span class="token operator">=</span>m2<span class="token punctuation">;</span>
-            <span class="token keyword">else</span> l<span class="token operator">=</span>m1<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        cout<span class="token operator">&lt;&lt;</span>fixed<span class="token operator">&lt;&lt;</span><span class="token function">setprecision</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">f</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//保留四位小数</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> </code></pre>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">--</span><span class="token punctuation">;</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//倒序打印出来</span>
+cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> </code></pre>
+<p>附加一个位运算的数学知识点<br>    可以看到arr1[i] 与 arr2[] 中所有元素的与arr1[i]&amp;arr2[0]、arr1[i]&amp;arr2[1]…arr1[i]&amp;arr2[j]…的异或值<strong>等价于</strong>arr1[i] &amp; (arr2[0]^arr2[1]^…^arr[j])<br>即满足 <strong>(a&amp;b)^(a&amp;c) = a&amp;(b^c)</strong>;</p>
 
             </div>
             <hr/>
@@ -551,7 +526,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/">https://wangxujunjie.github.io/2021/05/11/li-ti-1-qu-xian/</a>
+                    <a href="https://wangxujunjie.github.io/2021/06/26/jin-zhi-zhuan-hua/">https://wangxujunjie.github.io/2021/06/26/jin-zhi-zhuan-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,8 +564,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86-%E7%89%9B%E5%AE%A2/">
-                                    <span class="chip bg-color">二分与三分 牛客</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
                                 </a>
                             
                         </div>
@@ -760,29 +735,30 @@ using namespace std<span class="token punctuation">;</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/21/shi-da-pai-xu-suan-fa-da-zong-jie/">
+                <a href="/2021/06/26/jin-zhi-zhuan-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="十大排序算法大总结">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="进制转化">
                         
-                        <span class="card-title">十大排序算法大总结</span>
+                        <span class="card-title">进制转化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不要随随便便同情失败者,这会伤了他的自尊心
+                            疾风亦有归途
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -791,11 +767,12 @@ using namespace std<span class="token punctuation">;</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">排序算法</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -809,24 +786,24 @@ using namespace std<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/07/kmp-suan-fa/">
+                <a href="/2021/06/26/lambda-biao-da-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="KMP算法">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="lambda表达式">
                         
-                        <span class="card-title">KMP算法</span>
+                        <span class="card-title">lambda表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这种事不试试怎么知道！
+                            双剑滑斩
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
                             </span>
                         <span class="publish-author">
                             
@@ -839,8 +816,8 @@ using namespace std<span class="token punctuation">;</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">字符串 KMP算法</span>
+                    <a href="/tags/C-11/">
+                        <span class="chip bg-color">C++11</span>
                     </a>
                     
                 </div>
