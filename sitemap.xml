@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he-de-ji-chong-qing-kuang/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangxujunjie.github.io/2021/07/01/lambda-zi-diao-yong/</loc>
     
     <lastmod>2021-07-01</lastmod>
@@ -16,35 +9,7 @@
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/auto-he-2/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/auto-he-1/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/auto-he/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangxujunjie.github.io/2021/07/01/c-zhong-de-auto-auto/</loc>
+    <loc>https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he-de-ji-chong-qing-kuang/</loc>
     
     <lastmod>2021-07-01</lastmod>
     
@@ -298,14 +263,14 @@
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/</loc>
+    <loc>https://wangxujunjie.github.io/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
+    <loc>https://wangxujunjie.github.io/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -326,13 +291,6 @@
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/C-11/</loc>
-    <lastmod>2021-07-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wangxujunjie.github.io/tags/CF/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
@@ -347,14 +305,14 @@
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/STL-%E5%A0%86/</loc>
+    <loc>https://wangxujunjie.github.io/tags/C-11/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://wangxujunjie.github.io/tags/STL-%E5%A0%86/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -368,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://wangxujunjie.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://wangxujunjie.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -376,6 +334,13 @@
   
   <url>
     <loc>https://wangxujunjie.github.io/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/</loc>
+    <lastmod>2021-07-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangxujunjie.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
