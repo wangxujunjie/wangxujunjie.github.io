@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-06-26T12:08:09.587Z</updated>
+  <updated>2021-07-01T12:24:45.706Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,117 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有关auto和</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he/</id>
+    <published>2021-07-01T12:24:45.000Z</published>
+    <updated>2021-07-01T12:24:45.706Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>auto和</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/auto-he-2/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/auto-he-2/</id>
+    <published>2021-07-01T12:24:27.000Z</published>
+    <updated>2021-07-01T12:24:27.150Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>auto和</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/auto-he-1/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/auto-he-1/</id>
+    <published>2021-07-01T12:24:02.000Z</published>
+    <updated>2021-07-01T12:24:02.468Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>auto和</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/auto-he/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/auto-he/</id>
+    <published>2021-07-01T12:23:23.000Z</published>
+    <updated>2021-07-01T12:23:23.121Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C++中的auto、auto</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/c-zhong-de-auto-auto/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/c-zhong-de-auto-auto/</id>
+    <published>2021-07-01T12:22:40.000Z</published>
+    <updated>2021-07-01T12:22:40.141Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>lambda自调用</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/lambda-zi-diao-yong/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/lambda-zi-diao-yong/</id>
+    <published>2021-07-01T12:03:38.000Z</published>
+    <updated>2021-07-01T12:25:58.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一-通过函数指针进行自调用&quot;&gt;&lt;a href=&quot;#一-通过函数指针进行自调用&quot; class=&quot;headerlink&quot; title=&quot;一.通过函数指针进行自调用&quot;&gt;&lt;/a&gt;一.通过函数指针进行自调用&lt;/h1&gt;&lt;h2 id=&quot;基本使用&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++11" scheme="https://wangxujunjie.github.io/tags/C-11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 中的auto、auto&amp;、auto&amp;&amp;、const auto&amp;</title>
+    <link href="https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he-de-ji-chong-qing-kuang/"/>
+    <id>https://wangxujunjie.github.io/2021/07/01/you-guan-auto-he-de-ji-chong-qing-kuang/</id>
+    <published>2021-07-01T12:03:38.000Z</published>
+    <updated>2021-07-01T12:27:57.025Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++11" scheme="https://wangxujunjie.github.io/tags/C-11/"/>
+    
+  </entry>
   
   <entry>
     <title>进制转化</title>
@@ -318,167 +429,6 @@
     
     
     <category term="链表 面试" scheme="https://wangxujunjie.github.io/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优先队列的自定义排序</title>
-    <link href="https://wangxujunjie.github.io/2021/03/15/you-xian-dui-lie-de-zi-ding-yi-pai-xu/"/>
-    <id>https://wangxujunjie.github.io/2021/03/15/you-xian-dui-lie-de-zi-ding-yi-pai-xu/</id>
-    <published>2021-03-15T09:29:36.000Z</published>
-    <updated>2021-03-29T12:40:40.512Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;优先队列&quot;&gt;&lt;a href=&quot;#优先队列&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STL 堆" scheme="https://wangxujunjie.github.io/tags/STL-%E5%A0%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>滑动窗口算法</title>
-    <link href="https://wangxujunjie.github.io/2021/02/02/2021-2-2-hua-dong-chuang-kou-suan-fa/"/>
-    <id>https://wangxujunjie.github.io/2021/02/02/2021-2-2-hua-dong-chuang-kou-suan-fa/</id>
-    <published>2021-02-02T03:02:45.000Z</published>
-    <updated>2021-04-11T08:19:57.026Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;滑动窗口算法&quot;&gt;&lt;a href=&quot;#滑动窗口算法&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="双指针 算法" scheme="https://wangxujunjie.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88-%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>双指针</title>
-    <link href="https://wangxujunjie.github.io/2021/02/01/2021.2.1-shuang-zhi-zhen/"/>
-    <id>https://wangxujunjie.github.io/2021/02/01/2021.2.1-shuang-zhi-zhen/</id>
-    <published>2021-02-01T09:19:37.000Z</published>
-    <updated>2021-02-02T03:42:40.120Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什么是双指针（对撞指针，快慢指针）&quot;&gt;&lt;a href=&quot;#什么是双指针（对撞指针，快慢指针）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="算法 双指针" scheme="https://wangxujunjie.github.io/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算例题</title>
-    <link href="https://wangxujunjie.github.io/2021/01/31/2021.1.31-wei-yun-suan-li-ti/"/>
-    <id>https://wangxujunjie.github.io/2021/01/31/2021.1.31-wei-yun-suan-li-ti/</id>
-    <published>2021-01-31T11:02:42.000Z</published>
-    <updated>2021-02-23T13:09:38.606Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、a-b&quot;&gt;&lt;a href=&quot;#一、a-b&quot; class=&quot;headerlink&quot; title=&quot;一、a^b&quot;&gt;&lt;/a&gt;一、a^b&lt;/h2&gt;&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="位运算 快速幂 算法" scheme="https://wangxujunjie.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BF%AB%E9%80%9F%E5%B9%82-%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>全排列</title>
-    <link href="https://wangxujunjie.github.io/2021/01/31/2021.1.31-quan-pai-lie/"/>
-    <id>https://wangxujunjie.github.io/2021/01/31/2021.1.31-quan-pai-lie/</id>
-    <published>2021-01-31T05:21:51.000Z</published>
-    <updated>2021-02-01T09:21:54.056Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;函数排序-next-permutation-prev-permutation&quot;&gt;&lt;a href=&quot;#函数排序-next-permutation-prev-permutation&quot; class=&quot;headerlink&quot; title=&quot;函数排序</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STL" scheme="https://wangxujunjie.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第八届“图灵杯”NEUQ-ACM程序设计竞赛个人赛（同步赛）</title>
-    <link href="https://wangxujunjie.github.io/2021/01/30/2021.1.30-di-ba-jie-tu-ling-bei/"/>
-    <id>https://wangxujunjie.github.io/2021/01/30/2021.1.30-di-ba-jie-tu-ling-bei/</id>
-    <published>2021-01-30T10:07:36.000Z</published>
-    <updated>2021-02-01T09:23:14.793Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第八届“图灵杯”NEUQ-ACM程序设计竞赛个人赛（同步赛）&quot;&gt;&lt;a href=&quot;#第八届“图灵杯”NEUQ-ACM程序设计竞赛个人赛（同步赛）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="牛客" scheme="https://wangxujunjie.github.io/tags/%E7%89%9B%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Educational Codeforces Round 103 (Div. 2)</title>
-    <link href="https://wangxujunjie.github.io/2021/01/30/ecf103dv2/"/>
-    <id>https://wangxujunjie.github.io/2021/01/30/ecf103dv2/</id>
-    <published>2021-01-30T03:24:43.000Z</published>
-    <updated>2021-04-08T16:06:21.712Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Educational-Codeforces-Round-103-Div-2&quot;&gt;&lt;a href=&quot;#Educational-Codeforces-Round-103-Div-2&quot; class=&quot;headerlink&quot; title=&quot;Educational</summary>
-        
-      
-    
-    
-    
-    
-    <category term="CF" scheme="https://wangxujunjie.github.io/tags/CF/"/>
     
   </entry>
   
