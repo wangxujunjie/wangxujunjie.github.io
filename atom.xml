@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-07-01T12:31:11.576Z</updated>
+  <updated>2021-07-04T14:17:05.580Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>筛质数</title>
+    <link href="https://wangxujunjie.github.io/2021/07/04/shai-zhi-shu/"/>
+    <id>https://wangxujunjie.github.io/2021/07/04/shai-zhi-shu/</id>
+    <published>2021-07-04T13:58:55.000Z</published>
+    <updated>2021-07-04T14:17:05.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;补充下基础知识（基础太不牢固了wo&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acwing.com/problem/content/870/&quot;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;:</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数学" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>C++ 中的auto、auto&amp;、auto&amp;&amp;、const auto&amp;</title>
@@ -456,29 +481,6 @@
     
     
     <category term="位运算 快速幂 算法" scheme="https://wangxujunjie.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BF%AB%E9%80%9F%E5%B9%82-%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>全排列</title>
-    <link href="https://wangxujunjie.github.io/2021/01/31/2021.1.31-quan-pai-lie/"/>
-    <id>https://wangxujunjie.github.io/2021/01/31/2021.1.31-quan-pai-lie/</id>
-    <published>2021-01-31T05:21:51.000Z</published>
-    <updated>2021-02-01T09:21:54.056Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;函数排序-next-permutation-prev-permutation&quot;&gt;&lt;a href=&quot;#函数排序-next-permutation-prev-permutation&quot; class=&quot;headerlink&quot; title=&quot;函数排序</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STL" scheme="https://wangxujunjie.github.io/tags/STL/"/>
     
   </entry>
   

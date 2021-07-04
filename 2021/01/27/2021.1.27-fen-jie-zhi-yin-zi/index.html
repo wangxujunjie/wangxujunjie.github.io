@@ -412,7 +412,6 @@ if (windowWidth > 768) {
 样例输出    
 <span class="token number">2</span> <span class="token number">2</span> <span class="token number">5</span>
 
-
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 using namespace std<span class="token punctuation">;</span>
 bool <span class="token function">compare</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
@@ -430,6 +429,48 @@ bool <span class="token function">compare</span><span class="token punctuation">
             <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> endl <span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果n等于1，则证明已经完成分解，换行。 </span>
             <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//如果n！=1 ， 输出空格 继续循环。 </span>
         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+
+另一种更快的解法
+
+问题描述：给定 n 个正整数 ai，将每个数分解质因数，并按照质因数从小到大的顺序输出每个质因数的底数和指数。
+
+输入格式
+第一行包含整数 n。
+接下来 n 行，每行包含一个正整数 ai。
+
+输出格式
+对于每个正整数 ai，按照从小到大的顺序输出其分解质因数后，每个质因数的底数和指数，每个底数和指数占一行。
+每个正整数的质因数全部输出完毕后，输出一个空行。
+
+数据范围：<span class="token number">1</span>≤n≤<span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span>≤ai≤<span class="token number">2</span>×<span class="token number">1e9</span>
+
+
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+     map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span>ha<span class="token punctuation">;</span>
+     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果n=1，已经完成分解，跳出循环。 </span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span> n<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">//如果能整除当前的数，则一直循环，直到不能整除当前的数。 </span>
+            ha<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            n<span class="token operator">/</span><span class="token operator">=</span>i <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">////如果n还有剩余，单独处理</span>
+        ha<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> i<span class="token punctuation">:</span>ha<span class="token punctuation">)</span>
+    cout<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">.</span>first<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">.</span>second<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -818,7 +859,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.1k</span>&nbsp;字
+                class="white-color">24.8k</span>&nbsp;字
             
             
             
