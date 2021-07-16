@@ -488,11 +488,11 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-通过函数指针进行自调用"><a href="#一-通过函数指针进行自调用" class="headerlink" title="一.通过函数指针进行自调用"></a>一.通过函数指针进行自调用</h1><h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ul>
+                <h2 id="一-通过函数指针进行自调用"><a href="#一-通过函数指针进行自调用" class="headerlink" title="一.通过函数指针进行自调用"></a>一.通过函数指针进行自调用</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
 <li>头文件: #include <functional></li>
 <li>语法: std::function&lt;return_type(args_type)&gt;</li>
 </ul>
-<h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
+<h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
     <span class="token keyword">int</span> <span class="token function">numWays</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>relation<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">edges</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -518,7 +518,7 @@ public<span class="token punctuation">:</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>其中return_type 是函数指针的返回值类型，像上面案例中<font color='red'>dfs</font>函数的<font color='red'> void </font>类型。<br>其中args_type 是函数指针的参数类型，有多个函数参数，就可以有多个数据类型。</p>
-<h1 id="二、自己调用自己"><a href="#二、自己调用自己" class="headerlink" title="二、自己调用自己"></a>二、自己调用自己</h1><p>这个直接上代码吧！</p>
+<h2 id="二、自己调用自己"><a href="#二、自己调用自己" class="headerlink" title="二、自己调用自己"></a>二、自己调用自己</h2><p>这个直接上代码吧！</p>
 <pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
     <span class="token keyword">int</span> <span class="token function">numWays</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>relation<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -548,6 +548,7 @@ public<span class="token punctuation">:</span>
 <br>
 
 <p><font size=5> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/chuan-di-xin-xi/submissions/">例题请戳这</a> </font></p>
+<h2 id="三、1组正确和错误的样例展示"><a href="#三、1组正确和错误的样例展示" class="headerlink" title="三、1组正确和错误的样例展示"></a>三、1组正确和错误的样例展示</h2><p><strong>错误的主要原因是lambda无法推导出其要返回的类型，所以我们可以找一种无关情况，在前面做提前申明</strong><br><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/lambda%E8%87%AA%E8%B0%83%E7%94%A8%E7%9A%84%E9%94%99%E8%AF%AF%E6%83%85%E5%86%B5.5m4b4gk4kfo0.jpg" alt="lambda自调用的错误情况"><br><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E6%AD%A3%E7%A1%AE%E8%87%AA%E8%B0%83%E7%94%A8%E7%89%88.40rprmclrre0.jpg" alt="正确自调用版"><br><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E6%AD%A3%E7%A1%AE%E8%87%AA%E8%B0%83%E7%94%A8-function.17666q5er25c.jpg" alt="正确自调用-function"><br><strong>最后用的一种，在后面用-&gt;void申明我们要返回的类型</strong><br><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E6%AD%A3%E7%A1%AE%E8%87%AA%E8%B0%83%E7%94%A8%E7%89%88-%E7%BB%88.1rt6ivkzol40.jpg" alt="正确自调用版-终"></p>
 
             </div>
             <hr/>
@@ -1018,7 +1019,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.8k</span>&nbsp;字
+                class="white-color">24.9k</span>&nbsp;字
             
             
             
