@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2021-07-04T14:17:05.580Z</updated>
+  <updated>2021-07-19T09:28:15.170Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode万能头文件配置</title>
+    <link href="https://wangxujunjie.github.io/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/"/>
+    <id>https://wangxujunjie.github.io/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/</id>
+    <published>2021-07-19T09:09:33.000Z</published>
+    <updated>2021-07-19T09:28:15.170Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、解决思路&quot;&gt;&lt;a href=&quot;#一、解决思路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="https://wangxujunjie.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>筛质数</title>
@@ -458,29 +481,6 @@
     
     
     <category term="算法 双指针" scheme="https://wangxujunjie.github.io/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算例题</title>
-    <link href="https://wangxujunjie.github.io/2021/01/31/2021.1.31-wei-yun-suan-li-ti/"/>
-    <id>https://wangxujunjie.github.io/2021/01/31/2021.1.31-wei-yun-suan-li-ti/</id>
-    <published>2021-01-31T11:02:42.000Z</published>
-    <updated>2021-02-23T13:09:38.606Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、a-b&quot;&gt;&lt;a href=&quot;#一、a-b&quot; class=&quot;headerlink&quot; title=&quot;一、a^b&quot;&gt;&lt;/a&gt;一、a^b&lt;/h2&gt;&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="位运算 快速幂 算法" scheme="https://wangxujunjie.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BF%AB%E9%80%9F%E5%B9%82-%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

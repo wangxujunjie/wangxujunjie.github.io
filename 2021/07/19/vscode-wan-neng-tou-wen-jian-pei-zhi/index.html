@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="分解质因子, 再也の不会">
+    <meta name="keywords" content="vscode万能头文件配置, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分解质因子 | 再也の不会</title>
+    <title>vscode万能头文件配置 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">分解质因子</h1>
+                    <h1 class="description center-align post-title">vscode万能头文件配置</h1>
                 </div>
             </div>
         </div>
@@ -344,10 +344,105 @@ if (windowWidth > 768) {
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -356,12 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                                <span class="chip bg-color">数学</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -376,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-27
+                    2021-07-19
                 </div>
                 
 
@@ -397,84 +488,113 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="分解质因子"><a href="#分解质因子" class="headerlink" title="分解质因子"></a>分解质因子</h2><hr>
-<p>&emsp;&emsp; 下面是一道例题，简单的介绍了如何分解质因数，便于在之后遇到非常<br>大的数据时进行处理</p>
-<pre class=" language-c"><code class="language-c">
-                               <span class="token operator">*</span><span class="token operator">*</span>分解质因子<span class="token operator">*</span><span class="token operator">*</span>
-题目描述
-    将一个正整数分解质因数，例如，输入<span class="token number">90</span>，输出<span class="token number">2</span> <span class="token number">3</span> <span class="token number">3</span> <span class="token number">5</span>。 
-输入
-    输入一个正整数n（<span class="token number">2</span><span class="token operator">&lt;=</span>n<span class="token operator">&lt;=</span><span class="token number">2000</span>）。 
-输出
-    从小到大输出n的所有质因子，每两个数之间空一格。 
-样例输入
-<span class="token number">20</span>
-样例输出    
-<span class="token number">2</span> <span class="token number">2</span> <span class="token number">5</span>
+                <h2 id="一、解决思路"><a href="#一、解决思路" class="headerlink" title="一、解决思路"></a>一、解决思路</h2><ul>
+<li>出现问题的原因：<br>VScode不能在头文件的搜素路径中找到头文件。</li>
+<li>解决方案<br>由于头文件中的语句只是一些文件包含语句，因此可以创建一个头文件，将其移动到系统的搜索路径下。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E5%A4%B4%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84.15s1xkjqtwdc.jpg" alt="头文件路径"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95%E4%B8%8B.okbkbpppis0.jpg" alt="目标目录下"></p>
+<ul>
+<li>在include文件夹下创建一个bits文件夹，再在其目录下创建一个名为 stdc++.h 的文件，将以下代码复制到文件中保存</li>
+</ul>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// C++ includes used for precompiling -*- C++ -*-</span>
+<span class="token comment" spellcheck="true">// Copyright (C) 2003-2014 Free Software Foundation, Inc. This file is part of the GNU ISO C++ Library.  This library is free// software; you can redistribute it and/or modify it under the// terms of the GNU General Public License as published by the// Free Software Foundation; either version 3, or (at your option)// any later version.</span>
+<span class="token comment" spellcheck="true">// This library is distributed in the hope that it will be useful,// but WITHOUT ANY WARRANTY; without even the implied warranty of// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the// GNU General Public License for more details.</span>
+<span class="token comment" spellcheck="true">// Under Section 7 of GPL version 3, you are granted additional// permissions described in the GCC Runtime Library Exception, version// 3.1, as published by the Free Software Foundation.</span>
+<span class="token comment" spellcheck="true">// You should have received a copy of the GNU General Public License and// a copy of the GCC Runtime Library Exception along with this program;// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see// &lt;http://www.gnu.org/licenses/>.</span>
+<span class="token comment" spellcheck="true">/** @file stdc++.h *  This is an implementation file for a precompiled header. */</span>
+<span class="token comment" spellcheck="true">// 17.4.1.2 Headers</span>
+<span class="token comment" spellcheck="true">// C</span>
+<span class="token macro property">#<span class="token directive keyword">ifndef</span> _GLIBCXX_NO_ASSERT</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cassert></span></span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cctype></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cerrno></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cfloat></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ciso646></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;climits></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;clocale></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;csetjmp></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;csignal></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdarg></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstddef></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
 
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-using namespace std<span class="token punctuation">;</span>
-bool <span class="token function">compare</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> a<span class="token operator">></span>b<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> n <span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> n <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果n=1，已经完成分解，跳出循环。 </span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span> n<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">//如果能整除当前的数，则一直循环，直到不能整除当前的数。 </span>
-            cout <span class="token operator">&lt;&lt;</span> i <span class="token punctuation">;</span>
-            n <span class="token operator">=</span> n<span class="token operator">/</span>i <span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> endl <span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果n等于1，则证明已经完成分解，换行。 </span>
-            <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//如果n！=1 ， 输出空格 继续循环。 </span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token macro property">#<span class="token directive keyword">if</span> __cplusplus >= 201103L</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ccomplex></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cfenv></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cinttypes></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdalign></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdbool></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdint></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ctgmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cwchar></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cwctype></span></span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
 
+<span class="token comment" spellcheck="true">// C++</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bitset></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;complex></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;deque></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;exception></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;functional></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ios></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iosfwd></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;istream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iterator></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;limits></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;list></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;locale></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;memory></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;new></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;sstream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdexcept></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;streambuf></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;typeinfo></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;utility></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;valarray></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 
-
-
-另一种更快的解法
-
-问题描述：给定 n 个正整数 ai，将每个数分解质因数，并按照质因数从小到大的顺序输出每个质因数的底数和指数。
-
-输入格式
-第一行包含整数 n。
-接下来 n 行，每行包含一个正整数 ai。
-
-输出格式
-对于每个正整数 ai，按照从小到大的顺序输出其分解质因数后，每个质因数的底数和指数，每个底数和指数占一行。
-每个正整数的质因数全部输出完毕后，输出一个空行。
-
-数据范围：<span class="token number">1</span>≤n≤<span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span>≤ai≤<span class="token number">2</span>×<span class="token number">1e9</span>
-
-
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> t<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
-    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-     cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
-     map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span>ha<span class="token punctuation">;</span>
-     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果n=1，已经完成分解，跳出循环。 </span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span> n<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">//如果能整除当前的数，则一直循环，直到不能整除当前的数。 </span>
-            ha<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
-            n<span class="token operator">/</span><span class="token operator">=</span>i <span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">////如果n还有剩余，单独处理</span>
-        ha<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> i<span class="token punctuation">:</span>ha<span class="token punctuation">)</span>
-    cout<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">.</span>first<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">.</span>second<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token macro property">#<span class="token directive keyword">if</span> __cplusplus >= 201103L</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;array></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;atomic></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;chrono></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;condition_variable></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;forward_list></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;future></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;initializer_list></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;mutex></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;random></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ratio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;regex></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;scoped_allocator></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;system_error></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;thread></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;tuple></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;typeindex></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;type_traits></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%9C.31opuhyfezc0.jpg" alt="文件目录结果"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE.4nhgj9rigrg0.jpg" alt="vscode配置图"></p>
+<hr>
+<p>做完以上操作，回到vscode中即可正常使用了</p>
 
             </div>
             <hr/>
@@ -500,7 +620,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/">https://wangxujunjie.github.io/2021/01/27/2021.1.27-fen-jie-zhi-yin-zi/</a>
+                    <a href="https://wangxujunjie.github.io/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/">https://wangxujunjie.github.io/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,12 +658,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                                    <span class="chip bg-color">数学</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -713,29 +829,30 @@ using namespace std<span class="token punctuation">;</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/29/cf698dv2/">
+                <a href="/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Codeforces Round 698 (Div. 2)">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="vscode万能头文件配置">
                         
-                        <span class="card-title">Codeforces Round 698 (Div. 2)</span>
+                        <span class="card-title">vscode万能头文件配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            能坚持别人不能坚持的,才能拥有别人不能拥有的
+                            邦邦两拳
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -744,11 +861,12 @@ using namespace std<span class="token punctuation">;</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CF/">
-                        <span class="chip bg-color">CF</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
@@ -762,24 +880,24 @@ using namespace std<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/09/2021.1.9-zui-da-gong-yue-shu-he-zui-xiao-gong-bei-shu/">
+                <a href="/2021/07/04/shai-zhi-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="最大公约数和最小公倍数">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="筛质数">
                         
-                        <span class="card-title">最大公约数和最小公倍数</span>
+                        <span class="card-title">筛质数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            夫志当志存高远
+                            好一个冠冕堂皇之词
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-04
                             </span>
                         <span class="publish-author">
                             
@@ -791,10 +909,6 @@ using namespace std<span class="token punctuation">;</span>
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
                     
                     <a href="/tags/%E6%95%B0%E5%AD%A6/">
                         <span class="chip bg-color">数学</span>
@@ -836,6 +950,100 @@ using namespace std<span class="token punctuation">;</span>
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
