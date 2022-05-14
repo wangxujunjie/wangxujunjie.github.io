@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>再也の不会</title>
+  
+  <subtitle>再也の不会</subtitle>
+  <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://wangxujunjie.github.io/"/>
+  <updated>2022-05-14T12:45:42.824Z</updated>
+  <id>https://wangxujunjie.github.io/</id>
+  
+  <author>
+    <name>再也の不会</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode73双周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/03/05/lc73-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/03/05/lc73-shuang-zhou-sai/</id>
+    <published>2022-03-05T15:50:40.000Z</published>
+    <updated>2022-05-14T12:45:42.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-73/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode281周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/02/20/lc281-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/02/20/lc281-zhou-sai/</id>
+    <published>2022-02-20T04:58:32.000Z</published>
+    <updated>2022-05-14T12:47:02.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-281/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-6012-统计各位数字之和为偶数的整数个数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode72双周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/02/20/lc72-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/02/20/lc72-shuang-zhou-sai/</id>
+    <published>2022-02-20T01:56:08.000Z</published>
+    <updated>2022-05-14T12:45:34.139Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-72/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode280周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/02/13/lc280-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/02/13/lc280-zhou-sai/</id>
+    <published>2022-02-13T05:00:19.000Z</published>
+    <updated>2022-05-14T12:46:54.943Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-280/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-6004-得到-0-的操作数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++对C语言的增强总结</title>
+    <link href="https://wangxujunjie.github.io/2022/02/11/2022.2.11c-dui-c-yu-yan-de-zeng-qiang-zong-jie/"/>
+    <id>https://wangxujunjie.github.io/2022/02/11/2022.2.11c-dui-c-yu-yan-de-zeng-qiang-zong-jie/</id>
+    <published>2022-02-11T04:50:24.000Z</published>
+    <updated>2022-05-14T12:39:50.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;C-对C语言的增强&quot;&gt;&lt;a href=&quot;#C-对C语言的增强&quot; class=&quot;headerlink&quot; title=&quot;C++对C语言的增强&quot;&gt;&lt;/a&gt;C++对C语言的增强&lt;/h2&gt;&lt;h3 id=&quot;全局变量检测增强&quot;&gt;&lt;a href=&quot;#全局变量检测增强&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++" scheme="https://wangxujunjie.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对顶堆</title>
+    <link href="https://wangxujunjie.github.io/2022/02/06/2022-2-6-dui-ding-dui/"/>
+    <id>https://wangxujunjie.github.io/2022/02/06/2022-2-6-dui-ding-dui/</id>
+    <published>2022-02-06T02:44:20.000Z</published>
+    <updated>2022-05-14T12:39:39.043Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;浅谈对顶堆&quot;&gt;&lt;a href=&quot;#浅谈对顶堆&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数据结构" scheme="https://wangxujunjie.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode71双周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/02/06/lc71-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/02/06/lc71-shuang-zhou-sai/</id>
+    <published>2022-02-06T00:09:49.000Z</published>
+    <updated>2022-05-14T12:45:20.045Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-71/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5984-拆分数位后四位数字的最小和&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode278周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/30/lc278-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/30/lc278-zhou-sai/</id>
+    <published>2022-01-30T04:54:40.000Z</published>
+    <updated>2022-05-14T12:46:46.840Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-278/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5993-将找到的值乘以-2&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode277周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/23/lc277-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/23/lc277-zhou-sai/</id>
+    <published>2022-01-23T06:05:51.000Z</published>
+    <updated>2022-05-14T12:46:38.557Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-277/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5989-元素计数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode70双周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/23/lc70-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/23/lc70-shuang-zhou-sai/</id>
+    <published>2022-01-23T02:05:43.000Z</published>
+    <updated>2022-05-14T12:45:10.029Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-70/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5971-打折购买糖果的最小开销&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode276周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/16/lc276-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/16/lc276-zhou-sai/</id>
+    <published>2022-01-16T05:00:45.000Z</published>
+    <updated>2022-05-14T12:46:30.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-276/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode275周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/09/lc275-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/09/lc275-zhou-sai/</id>
+    <published>2022-01-09T07:11:45.000Z</published>
+    <updated>2022-05-14T12:46:19.521Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-275/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode69双周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/09/lc69-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/09/lc69-shuang-zhou-sai/</id>
+    <published>2022-01-09T06:40:11.000Z</published>
+    <updated>2022-05-14T12:45:00.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-69/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5960-将标题首字母大写&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode274周赛</title>
+    <link href="https://wangxujunjie.github.io/2022/01/02/lc274-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2022/01/02/lc274-zhou-sai/</id>
+    <published>2022-01-02T05:36:11.000Z</published>
+    <updated>2022-05-14T12:46:11.572Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-274/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5967-检查是否所有-A-都在-B-之前&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode第273周赛补题</title>
+    <link href="https://wangxujunjie.github.io/2021/12/26/lc273-zhou-sai-bu-ti/"/>
+    <id>https://wangxujunjie.github.io/2021/12/26/lc273-zhou-sai-bu-ti/</id>
+    <published>2021-12-26T07:59:55.000Z</published>
+    <updated>2022-05-14T12:46:01.306Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;因为上午有实验，只能下午再来补题了，顺带记录下，前两题太简单就不赘述了&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-273/&quot;&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode第68双周赛</title>
+    <link href="https://wangxujunjie.github.io/2021/12/26/lc68-shuang-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2021/12/26/lc68-shuang-zhou-sai/</id>
+    <published>2021-12-26T04:39:39.000Z</published>
+    <updated>2022-05-14T12:44:51.530Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;a href=&quot;https://leetcode-cn.com/contest/biweekly-contest-68/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-5946-句子中的最多单词数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode第272周赛</title>
+    <link href="https://wangxujunjie.github.io/2021/12/21/lc272-zhou-sai/"/>
+    <id>https://wangxujunjie.github.io/2021/12/21/lc272-zhou-sai/</id>
+    <published>2021-12-21T05:27:03.000Z</published>
+    <updated>2022-05-14T12:45:52.357Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/contest/weekly-contest-272/&quot;&gt;&lt;font color=blue&gt;竞赛链接&lt;/font&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;h3 id=&quot;T1-2108-找出数组中的第一个回文字符串&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同步和异步区别</title>
+    <link href="https://wangxujunjie.github.io/2021/12/16/tong-bu-yi-bu-gai-nian/"/>
+    <id>https://wangxujunjie.github.io/2021/12/16/tong-bu-yi-bu-gai-nian/</id>
+    <published>2021-12-16T13:40:38.000Z</published>
+    <updated>2022-05-14T12:41:28.384Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;先抛定义&quot;&gt;&lt;a href=&quot;#先抛定义&quot; class=&quot;headerlink&quot; title=&quot;先抛定义&quot;&gt;&lt;/a&gt;先抛定义&lt;/h2&gt;&lt;p&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    
+    <category term="进程线程" scheme="https://wangxujunjie.github.io/tags/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++_pbds库</title>
+    <link href="https://wangxujunjie.github.io/2021/12/12/c-pbds-ku/"/>
+    <id>https://wangxujunjie.github.io/2021/12/12/c-pbds-ku/</id>
+    <published>2021-12-12T12:55:11.000Z</published>
+    <updated>2022-05-14T12:43:16.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;pb_ds库是g++编译器默认附带的一个扩展库，全称是Policy-Based Data</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++ pdbs库" scheme="https://wangxujunjie.github.io/tags/C-pdbs%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 计时方法——std::chrono</title>
+    <link href="https://wangxujunjie.github.io/2021/12/10/c-ji-shi-fang-fa/"/>
+    <id>https://wangxujunjie.github.io/2021/12/10/c-ji-shi-fang-fa/</id>
+    <published>2021-12-10T03:21:33.000Z</published>
+    <updated>2022-05-14T12:43:29.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;C-11-标准的”最佳计时方法”的代码：&quot;&gt;&lt;a href=&quot;#C-11-标准的”最佳计时方法”的代码：&quot; class=&quot;headerlink&quot; title=&quot;C++11 标准的”最佳计时方法”的代码：&quot;&gt;&lt;/a&gt;C++11</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++11" scheme="https://wangxujunjie.github.io/tags/C-11/"/>
+    
+  </entry>
+  
+</feed>
