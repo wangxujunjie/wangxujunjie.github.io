@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangxujunjie.github.io/2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/</loc>
+    
+    <lastmod>2022-05-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangxujunjie.github.io/2021/07/19/vscode-wan-neng-tou-wen-jian-pei-zhi/</loc>
     
     <lastmod>2022-05-14</lastmod>
@@ -551,6 +558,13 @@
   
   <url>
     <loc>https://wangxujunjie.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88-%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-05-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangxujunjie.github.io/tags/%E9%9D%A2%E7%BB%8F/</loc>
     <lastmod>2022-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="leetcode276周赛, 再也の不会">
+    <meta name="keywords" content="暑期实习面经汇总, 再也の不会">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>leetcode276周赛 | 再也の不会</title>
+    <title>暑期实习面经汇总 | 再也の不会</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,12 +329,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/43.3i6nifa1bfu0.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/50.4m5i9uisjso0.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">leetcode276周赛</h1>
+                    <h1 class="description center-align post-title">暑期实习面经汇总</h1>
                 </div>
             </div>
         </div>
@@ -451,8 +451,8 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/LeetCode%E5%91%A8%E8%B5%9B/">
-                                <span class="chip bg-color">LeetCode周赛</span>
+                            <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                                <span class="chip bg-color">面经</span>
                             </a>
                         
                     </div>
@@ -467,7 +467,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-16
+                    2022-05-15
                 </div>
                 
 
@@ -488,136 +488,42 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/contest/weekly-contest-276/"><font color=blue>竞赛链接</font></a> </p>
-<h3 id="T1-5980-将字符串拆分为若干长度为-k-的组"><a href="#T1-5980-将字符串拆分为若干长度为-k-的组" class="headerlink" title="T1: 5980. 将字符串拆分为若干长度为 k 的组"></a>T1: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/divide-a-string-into-groups-of-size-k/">5980. 将字符串拆分为若干长度为 k 的组</a></h3><hr>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>模拟，按题意操作即可</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
-public<span class="token punctuation">:</span>
-    vector<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token function">divideString</span><span class="token punctuation">(</span>string s<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">,</span> <span class="token keyword">char</span> fill<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        vector<span class="token operator">&lt;</span>string<span class="token operator">></span>ans<span class="token punctuation">;</span>
-        string ss<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> i<span class="token punctuation">:</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            ss<span class="token operator">+</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>k<span class="token punctuation">)</span>
-                ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>ss<span class="token punctuation">)</span><span class="token punctuation">,</span>ss<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>ss<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>ss<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>k<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>ss<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>k<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                ss<span class="token operator">+</span><span class="token operator">=</span>fill<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>ss<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h4 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><p>时间复杂度：O(N)<br>空间复杂度：O(N)</p>
-<br>
-<br>
-
-
-<h3 id="T2-5194-得到目标值的最少行动次数"><a href="#T2-5194-得到目标值的最少行动次数" class="headerlink" title="T2: 5194. 得到目标值的最少行动次数"></a>T2: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-moves-to-reach-target-score/">5194. 得到目标值的最少行动次数</a></h3><hr>
-<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>不妨逆向考虑这一问题，此时加一操作变为减一，乘二操作变为除以二。我们从目标值开始。如果当前值为奇数，那么只能使用减一；如果当前值为偶数，且可以进行除以二操作，显然要优于使用减一。</p>
-<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
-public<span class="token punctuation">:</span>
-    <span class="token keyword">int</span> <span class="token function">minMoves</span><span class="token punctuation">(</span><span class="token keyword">int</span> tar<span class="token punctuation">,</span> <span class="token keyword">int</span> mds<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">long</span> <span class="token keyword">long</span> x<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>cnt<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>tar<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">while</span><span class="token punctuation">(</span>mds<span class="token operator">>=</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>tar<span class="token operator">%</span><span class="token number">2</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
-                cnt<span class="token operator">++</span><span class="token punctuation">;</span>
-                mds<span class="token operator">--</span><span class="token punctuation">;</span>
-                tar<span class="token operator">/</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>mds<span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>tar<span class="token operator">%</span><span class="token number">2</span><span class="token operator">==</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>tar<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//除的次数还有，但不能够整除</span>
-                tar<span class="token operator">--</span><span class="token punctuation">;</span>
-                cnt<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>mds<span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>tar<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">//除的次数不够了，直接可以算出结果</span>
-                cnt<span class="token operator">+</span><span class="token operator">=</span>tar<span class="token number">-1</span><span class="token punctuation">;</span>
-                tar<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> cnt<span class="token number">-1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h4 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><ul>
-<li>时间复杂度：O(log(N))</li>
-<li>空间复杂度：O(1)</li>
-</ul>
-<br>
-<br>
-
-
-<h3 id="T3-5982-解决智力问题"><a href="#T3-5982-解决智力问题" class="headerlink" title="T3: 5982. 解决智力问题"></a>T3: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/solving-questions-with-brainpower/">5982. 解决智力问题</a></h3><hr>
-<h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>容易想到动态规划求解。</p>
-<p>令 dp[i][0] 表示第 i 天开始时不解决问题可以取得的最高分数，从第 i 天开始解决问题 dp[i][1] 可以取得的最高分数。</p>
+                <h2 id="字节暑期实习后端开发一面（凉经）"><a href="#字节暑期实习后端开发一面（凉经）" class="headerlink" title="字节暑期实习后端开发一面（凉经）"></a>字节暑期实习后端开发一面（凉经）</h2><h4 id="3-21-一面-（60分钟）"><a href="#3-21-一面-（60分钟）" class="headerlink" title="3.21 一面 （60分钟）"></a>3.21 一面 （60分钟）</h4><p>首先整个面试体验还是很好，面试官很和善，有问题也会交流，字节对算法侧重较大，没写出来所以无了</p>
+<p>1.比赛经历相关<br>2.new和mallor的区别<br>3.mysql索引相关<br>4.mysql事务<br>5.B+树<br>6.三次握手，四次挥手<br>7.场景题</p>
 <ul>
-<li><p>如果这一天不做题，则直接以 max(dp[i+1][0],dp[i+1][1]) 分数更新当天开始时的最高分数。</p>
-</li>
-<li><p>如果这一天选择做题，dp[i][1]=que[i][0]，若 idx=i+que[i][1]+1 不越界的话，则需累加上 max(dp[idx][1],dp[idx][0])</p>
-</li>
+<li>视频面试这种形式的网络通信，用哪种协议比较好？为什么？</li>
+<li>登陆网站后，发现网站打不开，这个时候可能会是什么地方出了问题？</li>
 </ul>
-<h4 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h4><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
-public<span class="token punctuation">:</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> dp<span class="token punctuation">[</span><span class="token number">100010</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">mostPoints</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> que<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> n<span class="token operator">=</span>que<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dp<span class="token punctuation">[</span>n<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>que<span class="token punctuation">[</span>n<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>n<span class="token number">-2</span><span class="token punctuation">;</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token operator">--</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">int</span> idx<span class="token operator">=</span>i<span class="token operator">+</span>que<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//上一个解决问题的位置</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>que<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>idx<span class="token operator">&lt;</span>n<span class="token operator">&amp;&amp;</span>idx<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">)</span>
-                dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token keyword">return</span> <span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h4 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><ul>
-<li>时间复杂度：O(N)</li>
-<li>空间复杂度：O(N)</li>
-</ul>
+<p>8.进程和线程<br>9.进程之间的通信<br>10.保证当多个线程时，数据访问安全的问题？<br>。。。。（记不清ing）</p>
 <br>
+
+<p>算法题：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reorder-list/">143. 重排链表</a><br>忘了咋优化了，寄！！！</p>
 <br>
 
 
-<h3 id="T4-5983-同时运行-N-台电脑的最长时间"><a href="#T4-5983-同时运行-N-台电脑的最长时间" class="headerlink" title="T4: 5983. 同时运行 N 台电脑的最长时间"></a>T4: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-running-time-of-n-computers/">5983. 同时运行 N 台电脑的最长时间</a></h3><hr>
-<h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>有这么一个暴论：<br>若总的供电时间为 t ，则容量大于 t 的部分都可以被忽略。此时总能找到一种方案让每一个电池不同时为两台电脑供电且供电时间为总容量的平均值。<br>所以二分答案 ans ，对于容量大于 ans 的电池视为容量为 ans ，然后计算总容量，当它不小于 n * ans 的时候视为判定成功。</p>
-<h4 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h4><pre class=" language-c"><code class="language-c">class Solution <span class="token punctuation">{</span>
-public<span class="token punctuation">:</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">maxRunTime</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> batteries<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> m <span class="token operator">=</span> batteries<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">sort</span><span class="token punctuation">(</span>batteries<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> batteries<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        vector<span class="token operator">&lt;</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token operator">></span> <span class="token function">pre</span><span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//前缀和，方便后续直接计算结果</span>
-            pre<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> pre<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> batteries<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">auto</span> check <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> mid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token function">upper_bound</span><span class="token punctuation">(</span>batteries<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> batteries<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> mid<span class="token punctuation">)</span> <span class="token operator">-</span> batteries<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> pre<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> mid <span class="token operator">*</span> <span class="token punctuation">(</span>m <span class="token operator">-</span> k<span class="token punctuation">)</span> <span class="token operator">>=</span> mid <span class="token operator">*</span> n<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//当m>k时，肯定会多出m-k个空闲的来替换前面不足的电池</span>
-        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">long</span> <span class="token keyword">long</span> lo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> hi <span class="token operator">=</span> pre<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">/</span> n<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>lo <span class="token operator">&lt;=</span> hi<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">long</span> <span class="token keyword">long</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>lo <span class="token operator">+</span> hi<span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span>
-                lo <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span>
-                hi <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token keyword">return</span> hi<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h4 id="复杂度分析-3"><a href="#复杂度分析-3" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><ul>
-<li>时间复杂度：O((M+logN∑batteries)logM)</li>
-<li>空间复杂度：O(M)</li>
+<h2 id="百度暑期实习一面二面（凉经）"><a href="#百度暑期实习一面二面（凉经）" class="headerlink" title="百度暑期实习一面二面（凉经）"></a>百度暑期实习一面二面（凉经）</h2><h4 id="4-16-一面-（75分钟）"><a href="#4-16-一面-（75分钟）" class="headerlink" title="4.16 一面 （75分钟）"></a>4.16 一面 （75分钟）</h4><p>1.自我介绍<br>2.问项目<br>3.C++11新特性<br>4.智能指针<br>5.循环引用问题及解决<br>6.手写shared_ptr，就大概哪些成员变量和成员函数实现<br>7.move有了解过吗<br>8.给出了智能指针一段代码的用法，找错<br>9.C++内存管理<br>10.STL的一些容器<br>11.一个程序从预处理到运行经历了那些过程（详细说，编译过程中还包含词法分析、语法分析、语义分析……）<br>12.进程和线程的区别<br>13.进程和线程资源共享问题<br>14.死锁的概念<br>15.死锁产生原因<br>16.死锁的预防<br>17.死锁的避免<br>18.算法题</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">704. 二分查找</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-intervals/">56. 合并区间</a></li>
 </ul>
 <br>
 
 
-<h3 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h3><hr>
-<p>本次周赛，t2刚开始没有想到逆向做，卡了好久，t3看完题目知道是dp，写完大体后发现正向比例，中间跳过的问题不好处理，于是又反向遍历才解决，t4的贪心思路比较难想，其他处理起来倒是不难。总之思维还是不太敏捷，有点呆。。</p>
+<h4 id="4-16-二面-（55分钟）"><a href="#4-16-二面-（55分钟）" class="headerlink" title="4.16 二面 （55分钟）"></a>4.16 二面 （55分钟）</h4><p>1.自我介绍<br>2.问项目</p>
+<p>3.算法题</p>
+<ul>
+<li>01背包模板题</li>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/jC7MId/">剑指 Offer II 051. 节点之和最大的路径</a></li>
+</ul>
+<p>4.写个mysql查询语句 （可能因为我说我mysql不熟所以就没有深问）<br>5.C++11相关知识</p>
+<br>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>感觉二面表现的不是很好，算法题卡顿比较多，呜呜呜无了😭</p>
+<br>
+
+<h2 id="金山云暑期C-开发实习一面二面（已oc）"><a href="#金山云暑期C-开发实习一面二面（已oc）" class="headerlink" title="金山云暑期C++开发实习一面二面（已oc）"></a>金山云暑期C++开发实习一面二面（已oc）</h2><h4 id="4-6-一面（30min）"><a href="#4-6-一面（30min）" class="headerlink" title="4.6 一面（30min）"></a>4.6 一面（30min）</h4><p>0.自我介绍<br>1.挖项目<br>2.聊在学校参加的比赛<br>3.问在学校的一些学习课程<br>4.为什么选择找工作<br>5.C++虚函数的原理<br>6.宏定义和const<br>7.STL库用过吗，用过哪些<br>8.知道vector list….的底层实现吗<br>9.操作系统的一些东西<br>。。。。。<br>（后面记不太清了，问要不要撕算法，说没时间就不写了，没反问）</p>
+<h4 id="4-11-二面（15min）"><a href="#4-11-二面（15min）" class="headerlink" title="4.11 二面（15min）"></a>4.11 二面（15min）</h4><p>0.自我介绍<br>1.有了解过C++11吗，有哪些新特性<br>2.C++11的智能指针相关<br>3.智能指针是怎么使用的<br>4.share_ptr有什么问题<br>5.weak_ptr和share_ptr的区别<br>6.linux线程是怎么创建的<br>7.进程和线程的区别<br>8.进程和线程分别拥有哪些资源<br>9.进程通信的方式<br>10.反问环节</p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>C++和操作系统问的比较多，计网和数据库几乎没问，感觉对操作系统比较重视，语言本身更不用说了</p>
 
             </div>
             <hr/>
@@ -643,7 +549,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxujunjie.github.io/2022/01/16/lc276-zhou-sai/">https://wangxujunjie.github.io/2022/01/16/lc276-zhou-sai/</a>
+                    <a href="https://wangxujunjie.github.io/2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/">https://wangxujunjie.github.io/2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -681,8 +587,8 @@ public<span class="token punctuation">:</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/LeetCode%E5%91%A8%E8%B5%9B/">
-                                    <span class="chip bg-color">LeetCode周赛</span>
+                                <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                                    <span class="chip bg-color">面经</span>
                                 </a>
                             
                         </div>
@@ -852,28 +758,29 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/23/lc70-shuang-zhou-sai/">
+                <a href="/2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/34.ufx55aogmow.webp" class="responsive-img" alt="leetcode70双周赛">
+                        <img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/50.4m5i9uisjso0.webp" class="responsive-img" alt="暑期实习面经汇总">
                         
-                        <span class="card-title">leetcode70双周赛</span>
+                        <span class="card-title">暑期实习面经汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Rank - 1548/3640   Solved - 2/4
+                            迎难而上
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -882,11 +789,12 @@ public<span class="token punctuation">:</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LeetCode%E5%91%A8%E8%B5%9B/">
-                        <span class="chip bg-color">LeetCode周赛</span>
+                    <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                        <span class="chip bg-color">面经</span>
                     </a>
                     
                 </div>
@@ -900,23 +808,23 @@ public<span class="token punctuation">:</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/09/lc275-zhou-sai/">
+                <a href="/2022/03/05/lc73-shuang-zhou-sai/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/42.5c7yuk2d8xg0.webp" class="responsive-img" alt="leetcode275周赛">
+                        <img src="https://cdn.jsdelivr.net/gh/wangxujunjie/image-hosting@master/博客/38.26kouh8biqgw.webp" class="responsive-img" alt="leetcode73双周赛">
                         
-                        <span class="card-title">leetcode275周赛</span>
+                        <span class="card-title">leetcode73双周赛</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Rank - 670/4786   Solved - 3/4
+                            Rank - 138/5132   Solved - 4/4
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
                             </span>
                         <span class="publish-author">
                             

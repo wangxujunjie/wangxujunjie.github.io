@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>暑期实习面经汇总</title>
+      <link href="2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/"/>
+      <url>2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/</url>
+      
+        <content type="html"><![CDATA[<h2 id="字节暑期实习后端开发一面（凉经）"><a href="#字节暑期实习后端开发一面（凉经）" class="headerlink" title="字节暑期实习后端开发一面（凉经）"></a>字节暑期实习后端开发一面（凉经）</h2><h4 id="3-21-一面-（60分钟）"><a href="#3-21-一面-（60分钟）" class="headerlink" title="3.21 一面 （60分钟）"></a>3.21 一面 （60分钟）</h4><p>首先整个面试体验还是很好，面试官很和善，有问题也会交流，字节对算法侧重较大，没写出来所以无了</p><p>1.比赛经历相关<br>2.new和mallor的区别<br>3.mysql索引相关<br>4.mysql事务<br>5.B+树<br>6.三次握手，四次挥手<br>7.场景题</p><ul><li>视频面试这种形式的网络通信，用哪种协议比较好？为什么？</li><li>登陆网站后，发现网站打不开，这个时候可能会是什么地方出了问题？</li></ul><p>8.进程和线程<br>9.进程之间的通信<br>10.保证当多个线程时，数据访问安全的问题？<br>。。。。（记不清ing）</p><br><p>算法题：<a href="https://leetcode-cn.com/problems/reorder-list/">143. 重排链表</a><br>忘了咋优化了，寄！！！</p><br><h2 id="百度暑期实习一面二面（凉经）"><a href="#百度暑期实习一面二面（凉经）" class="headerlink" title="百度暑期实习一面二面（凉经）"></a>百度暑期实习一面二面（凉经）</h2><h4 id="4-16-一面-（75分钟）"><a href="#4-16-一面-（75分钟）" class="headerlink" title="4.16 一面 （75分钟）"></a>4.16 一面 （75分钟）</h4><p>1.自我介绍<br>2.问项目<br>3.C++11新特性<br>4.智能指针<br>5.循环引用问题及解决<br>6.手写shared_ptr，就大概哪些成员变量和成员函数实现<br>7.move有了解过吗<br>8.给出了智能指针一段代码的用法，找错<br>9.C++内存管理<br>10.STL的一些容器<br>11.一个程序从预处理到运行经历了那些过程（详细说，编译过程中还包含词法分析、语法分析、语义分析……）<br>12.进程和线程的区别<br>13.进程和线程资源共享问题<br>14.死锁的概念<br>15.死锁产生原因<br>16.死锁的预防<br>17.死锁的避免<br>18.算法题</p><ul><li><a href="https://leetcode-cn.com/problems/binary-search/">704. 二分查找</a></li><li><a href="https://leetcode-cn.com/problems/merge-intervals/">56. 合并区间</a></li></ul><br><h4 id="4-16-二面-（55分钟）"><a href="#4-16-二面-（55分钟）" class="headerlink" title="4.16 二面 （55分钟）"></a>4.16 二面 （55分钟）</h4><p>1.自我介绍<br>2.问项目</p><p>3.算法题</p><ul><li>01背包模板题</li><li><a href="https://leetcode-cn.com/problems/jC7MId/">剑指 Offer II 051. 节点之和最大的路径</a></li></ul><p>4.写个mysql查询语句 （可能因为我说我mysql不熟所以就没有深问）<br>5.C++11相关知识</p><br><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>感觉二面表现的不是很好，算法题卡顿比较多，呜呜呜无了😭</p><br><h2 id="金山云暑期C-开发实习一面二面（已oc）"><a href="#金山云暑期C-开发实习一面二面（已oc）" class="headerlink" title="金山云暑期C++开发实习一面二面（已oc）"></a>金山云暑期C++开发实习一面二面（已oc）</h2><h4 id="4-6-一面（30min）"><a href="#4-6-一面（30min）" class="headerlink" title="4.6 一面（30min）"></a>4.6 一面（30min）</h4><p>0.自我介绍<br>1.挖项目<br>2.聊在学校参加的比赛<br>3.问在学校的一些学习课程<br>4.为什么选择找工作<br>5.C++虚函数的原理<br>6.宏定义和const<br>7.STL库用过吗，用过哪些<br>8.知道vector list….的底层实现吗<br>9.操作系统的一些东西<br>。。。。。<br>（后面记不太清了，问要不要撕算法，说没时间就不写了，没反问）</p><h4 id="4-11-二面（15min）"><a href="#4-11-二面（15min）" class="headerlink" title="4.11 二面（15min）"></a>4.11 二面（15min）</h4><p>0.自我介绍<br>1.有了解过C++11吗，有哪些新特性<br>2.C++11的智能指针相关<br>3.智能指针是怎么使用的<br>4.share_ptr有什么问题<br>5.weak_ptr和share_ptr的区别<br>6.linux线程是怎么创建的<br>7.进程和线程的区别<br>8.进程和线程分别拥有哪些资源<br>9.进程通信的方式<br>10.反问环节</p><h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>C++和操作系统问的比较多，计网和数据库几乎没问，感觉对操作系统比较重视，语言本身更不用说了</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 面经 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode73双周赛</title>
       <link href="2022/03/05/lc73-shuang-zhou-sai/"/>
       <url>2022/03/05/lc73-shuang-zhou-sai/</url>
