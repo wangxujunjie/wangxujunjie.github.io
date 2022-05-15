@@ -358,7 +358,9 @@ if (windowWidth > 768) {
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -396,37 +398,19 @@ if (windowWidth > 768) {
                 </a>
                 
                 
-                <a href="/tags/%E7%89%9B%E5%AE%A2/" title="牛客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="牛客" style="background-color: #D5F5E3;">牛客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/STL/" title="STL: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="STL" style="background-color: #E8F8F5;">STL
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E5%BF%AB%E9%80%9F%E5%B9%82-%E7%AE%97%E6%B3%95/" title="快速幂 算法: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="快速幂 算法" style="background-color: #FEF9E7;">快速幂 算法
+                            data-tagname="快速幂 算法" style="background-color: #D5F5E3;">快速幂 算法
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/" title="算法 双指针: 1">
+                <a href="/tags/%E7%89%9B%E5%AE%A2/" title="牛客: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="算法 双指针" style="background-color: #F8F9F9;">算法 双指针
+                            data-tagname="牛客" style="background-color: #E8F8F5;">牛客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -435,7 +419,25 @@ if (windowWidth > 768) {
                 <a href="/tags/%E9%93%BE%E8%A1%A8-%E9%9D%A2%E8%AF%95/" title="链表 面试: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="链表 面试" style="background-color: #82E0AA;">链表 面试
+                            data-tagname="链表 面试" style="background-color: #FEF9E7;">链表 面试
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/STL/" title="STL: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="STL" style="background-color: #F8F9F9;">STL
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88/" title="算法 双指针: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="算法 双指针" style="background-color: #82E0AA;">算法 双指针
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -549,19 +551,19 @@ if (windowWidth > 768) {
                 </a>
                 
                 
-                <a href="/tags/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/" title="进程线程: 1">
+                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/" title="字符串 哈希算法: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="进程线程" style="background-color: #F8F9F9;">进程线程
+                            data-tagname="字符串 哈希算法" style="background-color: #F9EBEA;">字符串 哈希算法
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95/" title="字符串 哈希算法: 1">
+                <a href="/tags/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/" title="进程线程: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="字符串 哈希算法" style="background-color: #F9EBEA;">字符串 哈希算法
+                            data-tagname="进程线程" style="background-color: #F8F9F9;">进程线程
                         <span class="tag-length">1</span>
                     </span>
                 </a>
