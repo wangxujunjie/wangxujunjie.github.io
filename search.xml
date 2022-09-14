@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>类的大小</title>
+      <link href="2022/09/14/lei-de-da-xiao/"/>
+      <url>2022/09/14/lei-de-da-xiao/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、空类"><a href="#一、空类" class="headerlink" title="一、空类"></a>一、空类</h3><h4 id="1-真空类"><a href="#1-真空类" class="headerlink" title="1.真空类"></a>1.真空类</h4><pre class=" language-c++"><code class="language-c++">class CNull{};</code></pre><table><tr><td bgcolor=yellow>大小就是1</td></tr></table>主要是因为空类还是要被实例化的，为了保证每个实例在内存中都有独一无二的地址。编译器就给空类隐含的增加了一个字节。<br><br><h4 id="2-空类"><a href="#2-空类" class="headerlink" title="2.空类"></a>2.空类</h4><pre class=" language-c++"><code class="language-c++">class CNull2{public:    CNull2(){printf("Construct/n");}    ~CNull2(){printf("Desctruct/n");}    void Foo(){printf("Foo/n");}};</code></pre><table><tr><td bgcolor=yellow>大小就是1</td></tr></table>这种情况和空类是差不多的，内部成员函数并不会影响类的大小<h3 id="二、继承"><a href="#二、继承" class="headerlink" title="二、继承"></a>二、继承</h3><h4 id="1-简单类"><a href="#1-简单类" class="headerlink" title="1.简单类"></a>1.简单类</h4><pre class=" language-c++"><code class="language-c++">class COneMember{public:    COneMember(int iValue = 0){m_iOne = iValue;};private:    int m_iOne;};</code></pre><table><tr><td bgcolor=yellow>大小就是4</td></tr></table>因为有int型成员变量<br><br><h4 id="2-简单继承"><a href="#2-简单继承" class="headerlink" title="2.简单继承"></a>2.简单继承</h4><pre class=" language-c++"><code class="language-c++">class CTwoMember:public COneMember{private:    int m_iTwo;};</code></pre><table><tr><td bgcolor=yellow>大小是8</td></tr></table>子类成员接在父类成员之后的。就相当于有两个int型的整形变量。<br><br><h4 id="3-再继承"><a href="#3-再继承" class="headerlink" title="3.再继承"></a>3.再继承</h4><pre class=" language-c++"><code class="language-c++">class CThreemember:public CTwoMember{public:    CThreemember(int iValue=10) {m_iThree = iValue;};private:    int m_iThree;};</code></pre><table><tr><td bgcolor=yellow>大小是12</td></tr></table>孙类成员接在子类之后，再再继承就依次类推<br><br><h4 id="4-多重继承"><a href="#4-多重继承" class="headerlink" title="4.多重继承"></a>4.多重继承</h4><pre class=" language-c++"><code class="language-c++">class ClassA{public:    ClassA(int iValue=1){m_iA = iValue;};private:   int m_iA;};class ClassB{public:    ClassB(int iValue=2){m_iB = iValue;};private:    int m_iB;};class ClassC{public:    ClassC(int iValue=3){m_iC = iValue;};private:    int m_iC;};class CComplex :public ClassA, public ClassB, public ClassC{public:   CComplex(int iValue=4){m_iComplex = iValue;};private:    int m_iComplex;};</code></pre><table><tr><td bgcolor=yellow>大小是16</td></tr></table><p><strong>总结</strong></p><ul><li>普通单继承，只需将自身成员变量的大小加上父类大小。如果父类中有虚函数，子类中就不管有没有虚函数都不用加该大小；如果父类中没有虚函数，若子类中有虚函数的话需要加上指向虚表的指针大小。</li><li>普通的多继承，若几个父类都有虚表，则子类与第一个父类共用一个虚表指针</li></ul><h3 id="三、虚继承"><a href="#三、虚继承" class="headerlink" title="三、虚继承"></a>三、虚继承</h3><h4 id="1-虚继承"><a href="#1-虚继承" class="headerlink" title="1.虚继承"></a>1.虚继承</h4><pre class=" language-c++"><code class="language-c++">class CTwoMember:virtual public COneMember{private:    int m_iTwo;};</code></pre><table><tr><td bgcolor=yellow>大小是12</td></tr></table><p>主要的就是因为存在虚函数指针，其指向了一个虚函数表存放了三部分的信息，包括了RTTI运行时类型信息、虚函数指针相对于整体作用域的偏移还有虚函数的入口地址。</p><blockquote><p>E8 2F 42 00 //指针，指向一个关于偏移量的数组，且称之虚基类偏移量表指针<br>CC CC CC CC // m_iTwo<br>00 00 00 00 // m_iOne（虚基类数据成员）</p></blockquote><br><br><h4 id="2-带虚函数的空类"><a href="#2-带虚函数的空类" class="headerlink" title="2.带虚函数的空类"></a>2.带虚函数的空类</h4><pre class=" language-c++"><code class="language-c++">class CVirtualNull{public:    CVirtualNull(){printf("Construct/n");}    ~CVirtualNull(){printf("Desctruct/n");}    virtual void Foo(){printf("Foo/n");}};</code></pre><table><tr><td bgcolor=yellow>大小是4</td></tr></table>因为虚函数里面会存在一个虚函数指针指向一个虚函数表。但是请记住，虚函数表只有一张，当子类中又存在一个虚函数的时候，不会因为增加了新的虚函数而多出来一张表，新的虚函数的指针将添加在复制了的虚表后面。]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ 八股 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>暑期实习面经汇总</title>
       <link href="2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/"/>
       <url>2022/05/15/shu-qi-shi-xi-mian-jing-hui-zong-md/</url>
