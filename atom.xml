@@ -6,7 +6,7 @@
   <link href="https://wangxujunjie.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangxujunjie.github.io/"/>
-  <updated>2022-09-14T12:38:10.624Z</updated>
+  <updated>2023-03-18T13:25:24.523Z</updated>
   <id>https://wangxujunjie.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>求N!末尾0的个数</title>
+    <link href="https://wangxujunjie.github.io/2023/03/18/qiu-n-mo-wei-0-de-ge-shu/"/>
+    <id>https://wangxujunjie.github.io/2023/03/18/qiu-n-mo-wei-0-de-ge-shu/</id>
+    <published>2023-03-18T13:18:32.000Z</published>
+    <updated>2023-03-18T13:25:24.523Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;给定一个整数N，那么N的阶乘 N! 末尾有多少个0呢？ (N≤1000000000)&lt;/p&gt;
+&lt;h3 id=&quot;方法一&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="阶乘" scheme="https://wangxujunjie.github.io/tags/%E9%98%B6%E4%B9%98/"/>
+    
+  </entry>
   
   <entry>
     <title>类的大小</title>
@@ -465,29 +489,6 @@
     
     
     <category term="LeetCode周赛" scheme="https://wangxujunjie.github.io/tags/LeetCode%E5%91%A8%E8%B5%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>同步和异步区别</title>
-    <link href="https://wangxujunjie.github.io/2021/12/16/tong-bu-yi-bu-gai-nian/"/>
-    <id>https://wangxujunjie.github.io/2021/12/16/tong-bu-yi-bu-gai-nian/</id>
-    <published>2021-12-16T13:40:38.000Z</published>
-    <updated>2022-09-14T08:49:47.632Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;先抛定义&quot;&gt;&lt;a href=&quot;#先抛定义&quot; class=&quot;headerlink&quot; title=&quot;先抛定义&quot;&gt;&lt;/a&gt;先抛定义&lt;/h2&gt;&lt;p&gt;&lt;font</summary>
-        
-      
-    
-    
-    
-    
-    <category term="进程线程" scheme="https://wangxujunjie.github.io/tags/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   

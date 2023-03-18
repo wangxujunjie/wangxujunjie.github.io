@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>求N!末尾0的个数</title>
+      <link href="2023/03/18/qiu-n-mo-wei-0-de-ge-shu/"/>
+      <url>2023/03/18/qiu-n-mo-wei-0-de-ge-shu/</url>
+      
+        <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个整数N，那么N的阶乘 N! 末尾有多少个0呢？ (N≤1000000000)</p><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>最容易想到的方法，先把N的阶乘求出来，再用一个函数计算末尾0的个数，但是这个方法有两个问题：当数字很大时，效率很差、用内置类型（int、long等）会溢出。要解决这两个问题，只能优化算法。</p><p>首先要知道N的阶乘一定可以用K×10^M来表示，那我们的问题就变成了求M。又因为10 只能分解成 2 * 5，所以只需要求出 2 的个数和 5 的个数中的最小值，就得到了M。 而任何数因数分解后，2 的个数 一定多于 5 的个数（因为2的倍数比5的倍数多），所以 这个题最后又变成 了求 5 的个数。</p><p>可知 5 的倍数一定是隔 5 个数字出现一次，那么就可以修改一下循环条件不需要从1开始。</p><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">NumOf0</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">/*每除得一个5，就说明末尾有一个0*/</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>            num<span class="token operator">++</span><span class="token punctuation">;</span>            j <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> num<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>上面得到了结论：求出 5 的个数就是末尾0的个数。随着数字的增加，能提取出来的 5 的个数越来越多，循环次数会增加，为了减少循环次数，我们可以提取5 , 5^2 , 5^3 …可以提高效率5 的个数 Y 可得到公式：Y = [N/5] + [N/5^2] + [N/5^3] + …</p><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">NumOf0_fast</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        num <span class="token operator">+</span><span class="token operator">=</span> n <span class="token operator">/</span> <span class="token number">5</span><span class="token punctuation">;</span>        n <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> num<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 阶乘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类的大小</title>
       <link href="2022/09/14/lei-de-da-xiao/"/>
       <url>2022/09/14/lei-de-da-xiao/</url>
